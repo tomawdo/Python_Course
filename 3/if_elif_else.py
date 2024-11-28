@@ -8,15 +8,15 @@ sconto_c = 0.05  # 5% di sconto
 sconto_nessuno = 0.00  # Nessuno sconto
 
 prezzo = float(input("Inserisci il prezzo di un prodotto: "))
-cat_prodotto = input("Inserisci la categoria di sconto (A, B, C o Z): ")
+categoria_sconto = input("Inserisci la categoria di sconto (A, B, C o Z): ")
 
-if cat_prodotto.upper() == "A":
+if categoria_sconto.upper() == "A":
     prezzo_finale = prezzo - (prezzo * sconto_a)
-elif cat_prodotto.upper() == "B":
+elif categoria_sconto.upper() == "B":
     prezzo_finale = prezzo - (prezzo * sconto_b)
-elif cat_prodotto.upper() == "C":
+elif categoria_sconto.upper() == "C":
     prezzo_finale = prezzo - (prezzo * sconto_c)
-elif cat_prodotto.upper() == "Z":
+elif categoria_sconto.upper() == "Z":
     prezzo_finale = prezzo - (prezzo * sconto_nessuno)
 else:
     prezzo_finale = None
