@@ -1,5 +1,5 @@
 user = "Admin"
-checkUser = input("Inseisci nome utente: ")
+checkUser = input("Inserisci nome utente: ")
 
 if checkUser == user:
     print("corretto")
