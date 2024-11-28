@@ -1,5 +1,5 @@
 # ESERCIZIO LISTA DELLA SPESA
-# METODO 26-11-24
+# METODO 1
 
 utente = input("Come ti chiami? ")
 prod1 = input("Inserisci il prodotto: ")
