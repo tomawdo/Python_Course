@@ -22,28 +22,27 @@ symbol_value = {
     "D": 2
 }
 
-def check_winnings(reels, lines, bet_amount, pay_values):
+def check_winnings(columns, lines, bet, values):
     winnings = 0
     winning_lines = []
     for line in range(lines):
-        symbol = reels[0][line]  # Cambia 'lines' in 'line'
-        for reel in reels:
-            symbol_to_check = reel[line]  # Cambia 'lines' in 'line'
+        symbol = columns[0][line]
+        for column in columns:
+            symbol_to_check = column[line]
             if symbol != symbol_to_check:
                 break
         else:
-            winnings += pay_values[symbol] * bet_amount
+            winnings += values[symbol] * bet
             winning_lines.append(line + 1)
     return winnings, winning_lines
 
-
-def get_slot_machine_spin(rows: int, cols: int, symbols: dict[str, int]) -> list[list[str]]:
-    all_symbols = [] # lista di simboli
-    for symbol, symbol_counts in symbols.items(): #es il simbolo A comparirà 2 volte
+def get_slot_machine_spin(rows, cols, symbols):
+    all_symbols = []
+    for symbol, symbol_counts in symbols.items():
         for _ in range(symbol_counts):
             all_symbols.append(symbol)
 
-    columns = [] # colonne di simboli
+    columns = []
     for _ in range(cols):
         column = []
         current_symbols = all_symbols[:]
@@ -60,63 +59,77 @@ def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
             if i != len(columns) - 1:
-                ic(column[row], end=" | ")
+                print(column[row], end=" | ")
             else:
-                ic(column[row], end="")
-        ic()
-def deposito(): # scrivo la funzione deposito
-    while True: # ciclo l'operazione
-        amount = input("Quanto vuoi caricare? €") # chiedo all'utente di inserire una somma
-        if amount.isdigit(): # controllo che la somma sia un numero
-            amount = int(amount) # converto la somma in intero
-            if amount > 0: # controllo che la somma sia maggiore di zero
-                break # proseguo con l'operazione
-            else:
-                ic("L'importo deve essere maggiore di 0 (zero).") # informo l'utente che la somma deve essere maggiore di zero.
-        else:
-            ic("Attenzione! Inserisci un numero corretto.") # poiché non è un numero, chiedo di inserire un numero.
-    return amount
-def ottengo_nr_quote():
-    while True: # ciclo l'operazione
-        quote = input("Quante quote vuoi scommettere (1 - " + str(NR_MAX_QUOTE) + ")? ")
-        if quote.isdigit(): # controllo quote -> numero
-            quote = int(quote) # converto quote -> intero
-            if 1 <= quote <= NR_MAX_QUOTE: # controllo quote siano tra 1 e 3 (nr_max_righe)
-                break # proseguo con l'operazione
-            else:
-                ic("Inserisci un numero valido di quote.") # informo l'utente che l'importo deve essere maggiore di zero.
-        else:
-            ic("Attenzione! Inserisci un numero.") # poiché non è un numero, chiedo di inserire un numero.
-    return quote
-def ottengo_scommessa():
+                print(column[row], end="")
+        print()
+
+def deposit():
     while True:
-        importo = input("Quanto vuoi scommettere per ogni riga? €")
-        if importo.isdigit():
-            importo = int(importo)
-            if MIN_SCOMMESSA <= importo <= MAX_SCOMMESSA:
+        amount = input("Quanto vuoi caricare? €")
+        if amount.isdigit():
+            amount = int(amount)
+            if amount > 0:
+                break
+            else:
+                ic("L'importo deve essere maggiore di 0 (zero).")
+        else:
+            ic("Inserisci un importo corretto.")
+    return amount
+
+def get_number_of_lines():
+    while True:
+        lines = input("Quante quote vuoi scommettere (1 - " + str(NR_MAX_QUOTE) + ")? ")
+        if lines.isdigit():
+            lines = int(lines)
+            if 1 <= lines <= NR_MAX_QUOTE:
+                break
+            else:
+                ic("Inserisci un numero valido di quote.")
+        else:
+            ic("Attenzione! Inserisci un numero.")
+    return lines
+
+def get_bet():
+    while True:
+        amount = input("Quanto vuoi scommettere per ogni riga? €")
+        if amount.isdigit():
+            amount = int(amount)
+            if MIN_SCOMMESSA <= amount <= MAX_SCOMMESSA:
                 break
             else:
                 ic(f"L'importo per ogni riga dev'essere tra €{MIN_SCOMMESSA} - €{MAX_SCOMMESSA}.")
         else:
             ic("Inserisci un importo.")
-    return importo
-def main():
-    saldo = float(deposito())
-    quote = ottengo_nr_quote()
-    scommessa = float(ottengo_scommessa())
-    tot_scommessa = float(scommessa * quote)
+    return amount
 
-    if tot_scommessa > saldo:
-        ic(f"Non hai sufficiente credito. Il tuo saldo è: €{saldo}")
+def spin(balance):
+    lines = get_number_of_lines()
+    bet = float(get_bet())
+    total_bet = float(bet * lines)
+
+    if total_bet > balance:
+        print(f"Non hai sufficiente credito. Il tuo saldo è: €{balance}")
     else:
-        ic(f"Hai scommesso €{scommessa} su {quote} quote. Totale: €{tot_scommessa}.")
-        # Altra logica per la conclusione del gioco
+        print(f"Hai scommesso €{bet} su {lines} quote. Totale: €{total_bet}.")
 
     slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
     print_slot_machine(slots)
+    winnings, winning_lines = check_winnings(slots, lines, bet, symbol_value)
+    print(f"Hai vinto €{winnings}!")
+    print(f"Quote vinte: ", *winning_lines)
+    return winnings - total_bet
 
-    winnings, winning_lines = check_winnings(slots, quote, scommessa, symbol_value)
-    ic(f"Hai vinto €{winnings}!")
-    # ic(f"Hai vinto sulle quote: ", *winning_lines)
+def main():
+    balance = deposit()
+    while True:
+        print(f"Il tuo saldo: €{balance}")
+        answer = input("Premi INVIO per giocare (u per uscire).")
+        if answer == "u":
+            break
+        balance += spin(balance)
+
+    print(f"Alla prossima! Il saldo residuo è €{balance}")
+
 
 main()
