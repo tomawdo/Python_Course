@@ -53,7 +53,6 @@ def girare_slotmachine(rows, cols, symbols):
         columns.append(column)
 
     return columns
-
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
@@ -62,7 +61,6 @@ def print_slot_machine(columns):
             else:
                 print(column[row], end="")
         print()
-
 def deposito(): # scrivo la funzione deposito
     while True: # ciclo l'operazione
         importo = input("Quanto vuoi caricare? €") # chiedo all'utente di inserire una somma
@@ -75,7 +73,6 @@ def deposito(): # scrivo la funzione deposito
         else:
             print("Attenzione! Inserisci un numero corretto.") # poiché non è un numero, chiedo di inserire un numero.
     return importo
-
 def ottengo_nr_quote():
     while True: # ciclo l'operazione
         quote = input("Quante quote vuoi scommettere (1 - " + str(NR_MAX_QUOTE) + ")? ")
@@ -88,7 +85,6 @@ def ottengo_nr_quote():
         else:
             print("Attenzione! Inserisci un numero.") # poiché non è un numero, chiedo di inserire un numero.
     return quote
-
 def ottengo_scommessa():
     while True:
         importo = input("Quanto vuoi scommettere per ogni riga? €")
@@ -101,12 +97,11 @@ def ottengo_scommessa():
         else:
             print("Inserisci un importo.")
     return importo
-
-def game():
+def main():
+    saldo = float(deposito())
     quote = ottengo_nr_quote()
     scommessa = float(ottengo_scommessa())
     tot_scommessa = float(scommessa * quote)
-    saldo = float(deposito())
 
     if tot_scommessa > saldo:
         print(f"Non hai sufficiente credito. Il tuo saldo è: €{saldo}")
@@ -119,9 +114,6 @@ def game():
 
     winnings, winning_lines = check_winnings(slots, quote, scommessa, symbol_value)
     print(f"Hai vinto €{check_winnings}!")
-    print(f"Hai vinto sulle quote: ", *winning_lines)
-
-def main():
-    saldo = float(deposito())
+    # print(f"Hai vinto sulle quote: ", *winning_lines)
 
 main()
