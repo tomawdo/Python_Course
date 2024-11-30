@@ -1,4 +1,5 @@
 import random
+from icecream import ic 
 
 NR_MAX_QUOTE = 5
 MAX_SCOMMESSA = 100
@@ -57,10 +58,10 @@ def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
             if i != len(columns) - 1:
-                print(column[row], end=" | ")
+                ic(column[row], end=" | ")
             else:
-                print(column[row], end="")
-        print()
+                ic(column[row], end="")
+        ic()
 def deposito(): # scrivo la funzione deposito
     while True: # ciclo l'operazione
         importo = input("Quanto vuoi caricare? €") # chiedo all'utente di inserire una somma
@@ -69,9 +70,9 @@ def deposito(): # scrivo la funzione deposito
             if importo > 0: # controllo che l'importo sia maggiore di zero
                 break # proseguo con l'operazione
             else:
-                print("L'importo deve essere maggiore di 0 (zero).") # informo l'utente che l'importo deve essere maggiore di zero.
+                ic("L'importo deve essere maggiore di 0 (zero).") # informo l'utente che l'importo deve essere maggiore di zero.
         else:
-            print("Attenzione! Inserisci un numero corretto.") # poiché non è un numero, chiedo di inserire un numero.
+            ic("Attenzione! Inserisci un numero corretto.") # poiché non è un numero, chiedo di inserire un numero.
     return importo
 def ottengo_nr_quote():
     while True: # ciclo l'operazione
@@ -81,9 +82,9 @@ def ottengo_nr_quote():
             if 1 <= quote <= NR_MAX_QUOTE: # controllo quote siano tra 1 e 3 (nr_max_righe)
                 break # proseguo con l'operazione
             else:
-                print("Inserisci un numero valido di quote.") # informo l'utente che l'importo deve essere maggiore di zero.
+                ic("Inserisci un numero valido di quote.") # informo l'utente che l'importo deve essere maggiore di zero.
         else:
-            print("Attenzione! Inserisci un numero.") # poiché non è un numero, chiedo di inserire un numero.
+            ic("Attenzione! Inserisci un numero.") # poiché non è un numero, chiedo di inserire un numero.
     return quote
 def ottengo_scommessa():
     while True:
@@ -93,9 +94,9 @@ def ottengo_scommessa():
             if MIN_SCOMMESSA <= importo <= MAX_SCOMMESSA:
                 break
             else:
-                print(f"L'importo per ogni riga dev'essere tra €{MIN_SCOMMESSA} - €{MAX_SCOMMESSA}.")
+                ic(f"L'importo per ogni riga dev'essere tra €{MIN_SCOMMESSA} - €{MAX_SCOMMESSA}.")
         else:
-            print("Inserisci un importo.")
+            ic("Inserisci un importo.")
     return importo
 def main():
     saldo = float(deposito())
@@ -104,16 +105,16 @@ def main():
     tot_scommessa = float(scommessa * quote)
 
     if tot_scommessa > saldo:
-        print(f"Non hai sufficiente credito. Il tuo saldo è: €{saldo}")
+        ic(f"Non hai sufficiente credito. Il tuo saldo è: €{saldo}")
     else:
-        print(f"Hai scommesso €{scommessa} su {quote} quote. Totale: €{tot_scommessa}.")
+        ic(f"Hai scommesso €{scommessa} su {quote} quote. Totale: €{tot_scommessa}.")
         # Altra logica per la conclusione del gioco
 
     slots = girare_slotmachine(RIGHE, COLONNE, symbol_count)
     print_slot_machine(slots)
 
     winnings, winning_lines = check_winnings(slots, quote, scommessa, symbol_value)
-    print(f"Hai vinto €{check_winnings}!")
-    # print(f"Hai vinto sulle quote: ", *winning_lines)
+    ic(f"Hai vinto €{winnings}!")
+    # ic(f"Hai vinto sulle quote: ", *winning_lines)
 
 main()
