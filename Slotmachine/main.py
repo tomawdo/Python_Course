@@ -64,7 +64,6 @@ def print_slot_machine(columns):
             else:
                 ic(column[row], end="")
         ic()
-
 def deposito(): # scrivo la funzione deposito
     while True: # ciclo l'operazione
         amount = input("Quanto vuoi caricare? €") # chiedo all'utente di inserire una somma
@@ -77,7 +76,6 @@ def deposito(): # scrivo la funzione deposito
         else:
             ic("Attenzione! Inserisci un numero corretto.") # poiché non è un numero, chiedo di inserire un numero.
     return amount
-
 def ottengo_nr_quote():
     while True: # ciclo l'operazione
         quote = input("Quante quote vuoi scommettere (1 - " + str(NR_MAX_QUOTE) + ")? ")
