@@ -2,6 +2,7 @@
 # Il programma deve calcolare il prezzo finale dopo aver applicato lo sconto.
 
 # Dichiarazione delle categorie di sconto
+
 sconto_a = 0.20  # 20% di sconto
 sconto_b = 0.10  # 10% di sconto
 sconto_c = 0.05  # 5% di sconto
