@@ -1,13 +1,13 @@
 import random
-from icecream import ic 
+from icecream import ic
 
-NR_MAX_QUOTE = 5
+NR_MAX_QUOTE = 3
 MAX_SCOMMESSA = 100
-MIN_SCOMMESSA = 10
+MIN_SCOMMESSA = 1
 
 # struttura ruota slotmachine 3 righe * 3 colonne
-RIGHE = 3
-COLONNE = 3
+ROWS = 3
+COLS = 3
 
 symbol_count = {
     "A": 2,
@@ -36,13 +36,14 @@ def check_winnings(reels, lines, bet_amount, pay_values):
             winning_lines.append(line + 1)
     return winnings, winning_lines
 
-def girare_slotmachine(rows, cols, symbols):
-    all_symbols = []
+
+def get_slot_machine_spin(rows: int, cols: int, symbols: dict[str, int]) -> list[list[str]]:
+    all_symbols = [] # lista di simboli
     for symbol, symbol_counts in symbols.items(): #es il simbolo A comparirà 2 volte
         for _ in range(symbol_counts):
             all_symbols.append(symbol)
 
-    columns = []
+    columns = [] # colonne di simboli
     for _ in range(cols):
         column = []
         current_symbols = all_symbols[:]
@@ -54,6 +55,7 @@ def girare_slotmachine(rows, cols, symbols):
         columns.append(column)
 
     return columns
+
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
@@ -62,18 +64,20 @@ def print_slot_machine(columns):
             else:
                 ic(column[row], end="")
         ic()
+
 def deposito(): # scrivo la funzione deposito
     while True: # ciclo l'operazione
-        importo = input("Quanto vuoi caricare? €") # chiedo all'utente di inserire una somma
-        if importo.isdigit(): # controllo che l'importo sia un numero
-            importo = int(importo) # converto l'importo in intero
-            if importo > 0: # controllo che l'importo sia maggiore di zero
+        amount = input("Quanto vuoi caricare? €") # chiedo all'utente di inserire una somma
+        if amount.isdigit(): # controllo che la somma sia un numero
+            amount = int(amount) # converto la somma in intero
+            if amount > 0: # controllo che la somma sia maggiore di zero
                 break # proseguo con l'operazione
             else:
-                ic("L'importo deve essere maggiore di 0 (zero).") # informo l'utente che l'importo deve essere maggiore di zero.
+                ic("L'importo deve essere maggiore di 0 (zero).") # informo l'utente che la somma deve essere maggiore di zero.
         else:
             ic("Attenzione! Inserisci un numero corretto.") # poiché non è un numero, chiedo di inserire un numero.
-    return importo
+    return amount
+
 def ottengo_nr_quote():
     while True: # ciclo l'operazione
         quote = input("Quante quote vuoi scommettere (1 - " + str(NR_MAX_QUOTE) + ")? ")
@@ -110,7 +114,7 @@ def main():
         ic(f"Hai scommesso €{scommessa} su {quote} quote. Totale: €{tot_scommessa}.")
         # Altra logica per la conclusione del gioco
 
-    slots = girare_slotmachine(RIGHE, COLONNE, symbol_count)
+    slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
     print_slot_machine(slots)
 
     winnings, winning_lines = check_winnings(slots, quote, scommessa, symbol_value)
