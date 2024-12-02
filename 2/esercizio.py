@@ -12,7 +12,6 @@ przprod3 = 2
 
 print(utente, ",oggi hai speso", (float(przprod1) + przprod2 + przprod3), "euro per comprare: \n", prod1, "-", przprod1, "\n", prod2, "-", przprod2, "\n",prod3, "-", przprod3)
 
-
 # METODO 2
 
 utente = input("Ciao! Come ti chiami? ")
@@ -25,3 +24,6 @@ for i in range(2):
     
 totale_spesa = sum(prezzi)
 print(utente, "oggi hai speso: ", totale_spesa)
+
+# Definizione della funzione
+converter = lambda mpg: round(mpg * 35.400604353) / 100
