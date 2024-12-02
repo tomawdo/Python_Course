@@ -1,52 +1,69 @@
+from icecream import ic
+
 # Operatori aritmetici
-# -------------------
 a = 10
 b = 3
+print(f"Operatori aritmetici -> a={a} b={b}\n")
+
 
 # Addizione
 somma = a + b  # 10 + 3 = 13
+ic(somma)
 
 # Sottrazione
 differenza = a - b  # 10 - 3 = 7
+ic(differenza)
 
 # Moltiplicazione
 prodotto = a * b  # 10 * 3 = 30
+ic(prodotto)
 
 # Divisione
 divisione = a / b  # 10 / 3 = 3.333...
+ic(divisione)
 
 # Divisione intera
 divisione_intera = a // b  # 10 // 3 = 3
+ic(divisione_intera)
 
 # Modulo (resto della divisione)
 resto = a % b  # 10 % 3 = 1
+ic(resto)
 
 # Esponenziale
 potenza = a ** b  # 10 ** 3 = 1000
+ic(potenza)
 
 
 # Operatori di confronto
 # ----------------------
 x = 5
 y = 8
+print(f"Operatori di confronto -> x={x} y={y}\n")
 
 # Uguale
 uguale = x == y  # False
+ic(uguale)
 
 # Diverso
 diverso = x != y  # True
+ic(diverso)
 
 # Maggiore
 maggiore = x > y  # False
+ic(maggiore)
 
 # Minore
 minore = x < y  # True
+ic(minore)
 
 # Maggiore o uguale
 maggiore_uguale = x >= y  # False
+ic(maggiore_uguale)
 
 # Minore o uguale
 minore_uguale = x <= y  # True
+ic(minore_uguale)
 
 
 # Operatori logici
@@ -73,6 +90,7 @@ z = 7  # z è 7
 
 # Assegnazione con somma
 z += 3  # z = z + 3 -> z è 10
+print(z)
 
 # Assegnazione con sottrazione
 z -= 2  # z = z - 2 -> z è 8
