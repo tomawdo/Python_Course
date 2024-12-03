@@ -9,7 +9,6 @@ while i < 6:
 # for i in range < 6 #sintassi corretta è range(x) e non range < x (sintassi di while)
 # print "ciao carissimi" #identazione del print + le parentesi ()
 
-
 for i in range(6):
     print ("Ciao carissimi")
 
