@@ -1,9 +1,3 @@
-i = 0
-while i < 6:
-    print(i)
-    i += 1
-
-
 # 1. stampa 6 volte la frase "Ciao carissim" (3 errori)
 
 # for i in range < 6 #sintassi corretta è range(x) e non range < x (sintassi di while)
