@@ -1,4 +1,4 @@
-# ESERCIZIO INIZIO: Ciclo while e condizioni if per richiedere all’utente di inserire tre numeri pari negativi. Il programma continua fino a quando l’utente non inserisce correttamente tre numeri che soddisfano il criterio.
+# ESERCIZIO 1: Ciclo while e condizioni if per richiedere all’utente di inserire tre numeri pari negativi. Il programma continua fino a quando l’utente non inserisce correttamente tre numeri che soddisfano il criterio.
 
 numeri = []  # Lista per memorizzare i numeri validi
 
