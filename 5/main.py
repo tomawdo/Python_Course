@@ -41,3 +41,24 @@ while contatore < 3:
         continue # identazione
 #   contatore += # errore di sintassi 
     contatore += 1
+
+
+
+
+
+# Chiedi una parola all'utente
+parola = input("Inserisci una parola: ")
+
+# Verifica che la parola sia lunga almeno 3 caratteri
+if len(parola) >= 3:
+    # Metti le ultime 3 lettere all'inizio
+    trasformata = parola[-3:] + parola[:-3]
+    # Trasforma la prima lettera in maiuscolo
+    trasformata = trasformata.capitalize()
+    # Aggiungi "pyg" alla fine
+    trasformata += "pyg"
+    # Stampa la parola trasformata
+    print("Parola trasformata:", trasformata)
+else:
+    print("La parola deve avere almeno 3 caratteri!")
+
