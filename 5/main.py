@@ -6,12 +6,12 @@ while i < 6:
 
 # 1. stampa 6 volte la frase "Ciao carissim" (3 errori)
 
-# for i in range < 6
-# print "ciao carissimi"
+# for i in range < 6 #sintassi corretta è range(x) e non range < x (sintassi di while)
+# print "ciao carissimi" #identazione del print + le parentesi ()
 
 
-for i in range(6): #sintassi corretta è range(x) e non range < x (sintassi di while)
-    print ("Ciao carissimi") #identazione del print + le parentesi ()
+for i in range(6):
+    print ("Ciao carissimi")
 
 
 # 2. chiedi all'utente di inserire 3 numeri e stampa il numero di asterischi corrispondenti
