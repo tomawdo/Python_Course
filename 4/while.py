@@ -1,31 +1,21 @@
 # WHILE - è un ciclo infinito di operazioni tutte uguali finché una condizione è verificata
+# break - serve a fermare il ciclo
+# continue - passa alla prossima iterazione salta il controllo (if x == 3)
+# else -
 
-'''
-# ESERCIZIO INIZIO
+# break
+x = 0
+while x < 6:
+    print(x)
+    if x == 3:
+        break # quando 3 == 3 cliclo fermato dal break
+    x += 1
 
-# Ciclo while e condizioni if per richiedere all’utente di inserire tre numeri pari negativi.
-# Il programma continua fino a quando l’utente non inserisce correttamente tre numeri che soddisfano il criterio.
+# continue
+y = 0
+while y < 6:
+    y += 1
+    if y == 3:
+        continue # passa alla prossima iterazione ma non stampa "3"
+    print(y)
 
-numeri = []  # Lista per memorizzare i numeri validi
-
-while len(numeri) < 3:
-    numero = input(f"Inserisci tre numeri pari negativi ({len(numeri) + 1}/3): ")
-
-    if numero.lstrip('-').isdigit(): # controllo se l'input è un numero
-        numero = int(numero)
-        if numero < 0 and numero % 2 == 0: # controllo se il numero è pari e negativo
-            numeri.append(numero) # aggiungo numero alla lista
-        else:
-            print("Il numero deve essere pari e negativo. Riprova.")
-    else:
-        print("Inserire un numero valido. Riprova.")
-
-print(f"Hai inserito correttamente i numeri pari negativi: {numeri}")
-
-# ESERCIZIO FINE
-'''
-
-i = 0
-while i < 6:
-    print(i)
-    i += 1
