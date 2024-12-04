@@ -1,0 +1,1 @@
+print("giorno 6")
