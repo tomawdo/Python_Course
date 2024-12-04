@@ -1,4 +1,4 @@
-# test
+'''
 dati = ["Angela", 51, "Maria", 12, "Dario", 34, "Marco", 34]
 print(dati[0], dati[1])
 
@@ -14,9 +14,14 @@ c = 3
 
 VarBool = a > b
 print(VarBool)
+'''
 
-anni = [2024, 2025, 2209, 1988, 2007]
-frutta = ["mela", "pera", "uva", "anguria"]
-dati = [37, 52.5, "camicia"]
+#dati = [37, 52.5, "camicia"]
+#anni = [2024, 2025, 2209, 1988, 2007]
+paniere_frutta = ["mela", "pera", "uva", "anguria", "melone", "arancia"]
 
-print(dati[-2])
+#for frutto in paniere_frutta:
+#    print(frutto)
+
+for i in range(len(paniere_frutta)-1, -1, -1):
+    print(paniere_frutta[i])
