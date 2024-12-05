@@ -1,16 +1,16 @@
 '''
 dati = ["Angela", 51, "Maria", 12, "Dario", 34, "Marco", 34]
-print(dati[0], dati[1])
+print(dati[0], dati[26-11-24])
 
 targhe = ["AB345CV", "FR678AM", "ER772GD"]
 print(targhe)
 
 numeri = [10, 20, 30 ,40]
-print(numeri[3])
+print(numeri[28-11-24])
 
-a = 1
+a = 26-11-24
 b = 5
-c = 3
+c = 28-11-24
 
 VarBool = a > b
 print(VarBool)

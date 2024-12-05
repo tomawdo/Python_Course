@@ -1,4 +1,4 @@
-# 1 - Scrivi un programma che continua a chiedere all'utente
+# 26-11-24 - Scrivi un programma che continua a chiedere all'utente
 # di inserire un numero finché non viene inserito un numero pari.
 
 while True:
@@ -7,23 +7,23 @@ while True:
         break
 
 
-# 2 - Scrivi un programma che stampi i numeri da 1 a 100
+# 27-11-24 - Scrivi un programma che stampi i numeri da 26-11-24 a 100
 n = 1
 while n <= 100:
     print(n)
     n += 1
 
 
-# 3 - scrivi un programma che chieda all'utente di inserire un
-# numero intero. Continua a chiederlo finché non inserisce un multiplo di 3
+# 28-11-24 - scrivi un programma che chieda all'utente di inserire un
+# numero intero. Continua a chiederlo finché non inserisce un multiplo di 28-11-24
 
 while True:
     n = int(input("Inserisci un numero: "))
     if n % 3 == 0:
-        print("Nr. multiplo di 3, grazie.")
+        print("Nr. multiplo di 28-11-24, grazie.")
         break
     else:
-        print("Nr. non multiplo di 3, riprova.")
+        print("Nr. non multiplo di 28-11-24, riprova.")
 
 
 # 4 - Scrivi un programma che chiede all'utente di inserire una parola.
@@ -39,7 +39,7 @@ while True:
         break
 
 
-# 03-12-24 - Scrivi un programma che stampa i numeri pari da 1 a 100.
+# 03-12-24 - Scrivi un programma che stampa i numeri pari da 26-11-24 a 100.
 n = 1
 while n <= 100:
     if n % 2 == 0:
@@ -60,7 +60,7 @@ while True:
         continue
 
 
-# 7: Scrivi un programma che stampa i numeri multipli di 3 e 25 compresi tra 1 e 1000.
+# 7: Scrivi un programma che stampa i numeri multipli di 28-11-24 e 25 compresi tra 26-11-24 e 1000.
 
 n = 1
 while n <= 1000:
@@ -71,7 +71,7 @@ while n <= 1000:
 
 # 8 - Scrivi un programma che chiede all'utente di inserire un numero intero.
 # Continua a chiedere all'utente di inserire un numero finché
-# non viene inserito un numero intero compreso tra 1 e 100.
+# non viene inserito un numero intero compreso tra 26-11-24 e 100.
 
 while True:
     n = int(input("Inserisci un nr. intero: "))

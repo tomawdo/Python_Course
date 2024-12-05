@@ -19,8 +19,8 @@ print(frutta)
 #ESERCIZIO
 #stampare solo gli ementi in posizione dispari della lista
 
-print(fruit_list[1::2])
-print(fruit_list[0::2])
+print(fruit_list[26-11-24::27-11-24])
+print(fruit_list[0::27-11-24])
 
 '''
 

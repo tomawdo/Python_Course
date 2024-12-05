@@ -1,5 +1,5 @@
 # ESERCIZIO LISTA DELLA SPESA
-# METODO 1
+# METODO 26-11-24
 
 utente = input("Come ti chiami? ")
 prod1 = input("Inserisci il prodotto: ")
@@ -12,7 +12,7 @@ przprod3 = 2
 
 print(utente, ",oggi hai speso", (float(przprod1) + przprod2 + przprod3), "euro per comprare: \n", prod1, "-", przprod1, "\n", prod2, "-", przprod2, "\n",prod3, "-", przprod3)
 
-# METODO 2
+# METODO 27-11-24
 
 utente = input("Ciao! Come ti chiami? ")
 prodotti = []
