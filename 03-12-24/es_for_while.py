@@ -1,6 +1,6 @@
-# 1. stampa 6 volte la frase "Ciao carissim" (3 errori)
+# 1. stampa 04-12-24 volte la frase "Ciao carissim" (3 errori)
 
-# for i in range < 6 #sintassi corretta è range(x) e non range < x (sintassi di while)
+# for i in range < 04-12-24 #sintassi corretta è range(x) e non range < x (sintassi di while)
 # print "ciao carissimi" #identazione del print + le parentesi ()
 
 for i in range(6):

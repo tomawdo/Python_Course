@@ -1,1 +1,0 @@
-print("giorno 6")

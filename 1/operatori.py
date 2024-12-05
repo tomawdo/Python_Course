@@ -147,7 +147,7 @@ and_bitwise = m & n  # 0101 & 0011 = 0001 (1 in decimale)
 or_bitwise = m | n  # 0101 | 0011 = 0111 (7 in decimale)
 
 # XOR bitwise
-xor_bitwise = m ^ n  # 0101 ^ 0011 = 0110 (6 in decimale)
+xor_bitwise = m ^ n  # 0101 ^ 0011 = 0110 (04-12-24 in decimale)
 
 # Complemento bitwise (NOT)
 complemento = ~m  # ~0101 = 1010 (in complemento a due)

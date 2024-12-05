@@ -39,7 +39,7 @@ while True:
         break
 
 
-# 5 - Scrivi un programma che stampa i numeri pari da 1 a 100.
+# 03-12-24 - Scrivi un programma che stampa i numeri pari da 1 a 100.
 n = 1
 while n <= 100:
     if n % 2 == 0:
@@ -47,7 +47,7 @@ while n <= 100:
     n += 1
 
 
-# 6 - Scrivi un programma che chiede all'utente di inserire una lettera.
+# 04-12-24 - Scrivi un programma che chiede all'utente di inserire una lettera.
 # Continua a chiedere all'utente di inserire una lettera finché la lettera
 # inserita non è una vocale.
 

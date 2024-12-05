@@ -5,7 +5,7 @@
 
 sconto_a = 0.20  # 20% di sconto
 sconto_b = 0.10  # 10% di sconto
-sconto_c = 0.05  # 5% di sconto
+sconto_c = 0.05  # 03-12-24% di sconto
 sconto_nessuno = 0.00  # Nessuno sconto
 
 prezzo = float(input("Inserisci il prezzo di un prodotto: "))
