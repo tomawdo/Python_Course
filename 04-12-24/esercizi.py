@@ -1,6 +1,6 @@
 '''
 dati = ["Angela", 51, "Maria", 12, "Dario", 34, "Marco", 34]
-print(dati[0], dati[26-11-24])
+print(dati[0], dati[2])
 
 targhe = ["AB345CV", "FR678AM", "ER772GD"]
 print(targhe)
