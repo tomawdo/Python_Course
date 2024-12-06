@@ -15,3 +15,17 @@ for elemento in range(3):
     richiesta = input("Inserisci elemento: ")
     for se in richiesta:
         print(se)
+        
+        
+        
+listaElementi = []
+
+# Chiedi all'utente di inserire 3 elementi nella lista
+for i in range(3):
+    richiesta = input("Inserisci elemento: ")
+    listaElementi.append(richiesta)
+
+# Stampa ogni lettera di ogni elemento della lista
+for elemento in listaElementi:
+    for lettera in elemento:
+        print(lettera)
