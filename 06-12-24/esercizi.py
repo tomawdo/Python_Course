@@ -9,3 +9,9 @@ print(cibi)
 cibi = [input("Inserisci un cibo: ") for _ in range(3)]
 print(cibi)
 
+# chiedi all'utente di inserire 3 elementi in una lista e stampa ogni lettera di ogni elemento della lista
+listaElementi = []
+for elemento in range(3):
+    richiesta = input("Inserisci elemento: ")
+    for se in richiesta:
+        print(se)
