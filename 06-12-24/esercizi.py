@@ -33,3 +33,16 @@ for elemento in listaElementi:
 
 # chiediamo di inserire due numeri
 # stampiamo tutti i numeri compresi nel range indicato dall'utente
+
+# Chiediamo all'utente di inserire due numeri
+numero1 = int(input("Inserisci il primo numero: "))
+numero2 = int(input("Inserisci il secondo numero: "))
+
+# Determiniamo l'intervallo corretto (minimo e massimo)
+minimo = min(numero1, numero2)
+massimo = max(numero1, numero2)
+
+# Stampiamo tutti i numeri compresi nel range
+print("I numeri compresi tra", minimo, "e", massimo, "sono:")
+for numero in range(minimo, massimo + 1):
+    print(numero)
