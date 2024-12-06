@@ -30,3 +30,6 @@ for elemento in listaElementi:
     print(f"\nParola: {elemento}")  # Introduce la parola
     for lettera in elemento:
         print(lettera)
+
+# chiediamo di inserire due numeri
+# stampiamo tutti i numeri compresi nel range indicato dall'utente
