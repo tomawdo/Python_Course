@@ -25,7 +25,8 @@ for i in range(3):
     richiesta = input("Inserisci elemento: ")
     listaElementi.append(richiesta)
 
-# Stampa ogni lettera di ogni elemento della lista
+# Stampa ogni parola in spelling
 for elemento in listaElementi:
+    print(f"\nParola: {elemento}")  # Introduce la parola
     for lettera in elemento:
         print(lettera)
