@@ -6,4 +6,6 @@ for cibo in range(3):
     cibi.append(domanda)
 print(cibi)
 
+cibi = [input("Inserisci un cibo: ") for _ in range(3)]
+print(cibi)
 
