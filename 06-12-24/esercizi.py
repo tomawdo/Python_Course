@@ -1,7 +1,7 @@
 import random
 
 # chiedete di inserire tre cibi e salvai in una lista
-'''
+
 # metodo 1
 cibi = []
 for cibo in range(3):
@@ -50,7 +50,7 @@ for elemento in listaElementi:
     print(f"\nParola: {elemento}")
     for lettera in elemento:
         print(lettera, end=" | ")
-'''
+
 
 # Chiediamo all'utente di inserire due numeri la cui funzione sia definire il range
 numero1 = int(input("Inserisci il primo numero: "))
