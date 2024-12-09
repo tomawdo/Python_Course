@@ -102,3 +102,16 @@ print("Stringa inversa:", stringa_inversa)
 separatore = input("Inserisci un separatore: ")
 stringa_unita = separatore.join(stringa_senza_spazi)
 print("Stringa con caratteri uniti dal separatore:", stringa_unita)
+
+
+# Dizionario per sostituire le vocali con '*'
+mappa_vocali = {'a': '*', 'e': '*', 'i': '*', 'o': '*', 'u': '*',
+                'A': '*', 'E': '*', 'I': '*', 'O': '*', 'U': '*'}
+
+# Chiedi all'utente una stringa
+stringa = input("Inserisci una stringa: ")
+
+# Costruisci una nuova stringa sostituendo i caratteri in base al dizionario
+stringa_sostituita = ''.join(mappa_vocali[char] if char in mappa_vocali else char for char in stringa)
+
+print("Stringa con vocali sostituite:", stringa_sostituita)
