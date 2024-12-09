@@ -17,7 +17,6 @@ for nome in lista:
                 print(vocale)
 
 
-
 lista_uno = [1,2,3,4,5]
 lista_due = [10,2,9,8,5]
 
