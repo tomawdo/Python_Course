@@ -20,3 +20,8 @@ print("Stringa ordinata:", ''.join(sorted(stringa)))
 # Conversione di un numero intero in stringa
 numero = int(input("Inserisci un numero intero: "))
 print("Numero come stringa:", str(numero))
+
+# ESERCIZIO 2: Chiedi all'utente una frase o parola. Fai quanto segue:
+# - trova la posizione della prima occorenza della parola nella frase
+# - conta quante volte appare la parola nella frase
+# - converti la frase in maiuscolo, minuscolo e con la prima lettera maiuscola.
