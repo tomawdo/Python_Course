@@ -56,3 +56,37 @@ print("Frase con la prima lettera maiuscola:", frase.capitalize())
 # - Verfica se la stringa inizia con una determinata parola e finsice con un'altra
 # - stampa la stringa inversa usando slicing
 # - unisci i caratteri della stringa con un separatore
+
+# Chiedi all'utente una stringa
+stringa = input("Inserisci una stringa: ")
+
+# Rimuovi gli spazi iniziali
+stringa_senza_spazi = stringa.lstrip()
+print("Stringa senza spazi iniziali:", stringa_senza_spazi)
+
+# Sostituisci tutte le vocali con il simbolo '*'
+vocali = "aeiouAEIOU"
+stringa_sostituita = ''.join('*' if c in vocali else c for c in stringa_senza_spazi)
+print("Stringa con vocali sostituite:", stringa_sostituita)
+
+# Verifica se la stringa inizia con una determinata parola e finisce con un'altra
+inizio = input("Inserisci la parola con cui dovrebbe iniziare la stringa: ")
+fine = input("Inserisci la parola con cui dovrebbe finire la stringa: ")
+if stringa_senza_spazi.startswith(inizio):
+    print(f"La stringa inizia con '{inizio}'.")
+else:
+    print(f"La stringa non inizia con '{inizio}'.")
+
+if stringa_senza_spazi.endswith(fine):
+    print(f"La stringa finisce con '{fine}'.")
+else:
+    print(f"La stringa non finisce con '{fine}'.")
+
+# Stampa la stringa inversa usando slicing
+stringa_inversa = stringa_senza_spazi[::-1]
+print("Stringa inversa:", stringa_inversa)
+
+# Unisci i caratteri della stringa con un separatore
+separatore = input("Inserisci un separatore: ")
+stringa_unita = separatore.join(stringa_senza_spazi)
+print("Stringa con caratteri uniti dal separatore:", stringa_unita)
