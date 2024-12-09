@@ -111,7 +111,13 @@ mappa_vocali = {'a': '*', 'e': '*', 'i': '*', 'o': '*', 'u': '*',
 # Chiedi all'utente una stringa
 stringa = input("Inserisci una stringa: ")
 
-# Costruisci una nuova stringa sostituendo i caratteri in base al dizionario
-stringa_sostituita = ''.join(mappa_vocali[char] if char in mappa_vocali else char for char in stringa)
+# Costruisci una nuova stringa
+stringa_sostituita = ""
+for char in stringa:
+    if char in mappa_vocali:  # Se il carattere è una vocale
+        stringa_sostituita += mappa_vocali[char]  # Sostituiscilo con '*'
+    else:
+        stringa_sostituita += char  # Altrimenti, mantienilo invariato
 
 print("Stringa con vocali sostituite:", stringa_sostituita)
+
