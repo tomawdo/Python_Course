@@ -121,3 +121,12 @@ for char in stringa:
 
 print("Stringa con vocali sostituite:", stringa_sostituita)
 
+
+
+
+
+# TUPLE
+
+mia_tuple = ("Torino", "Roma", "Napoli")
+print(mia_tuple.count("Torino"))
+print(mia_tuple.index("Torino"))
