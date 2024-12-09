@@ -66,11 +66,8 @@ print("Stringa senza spazi iniziali:", stringa_senza_spazi)
 
 # Sostituisci tutte le vocali con il simbolo '*'
 
-# Sostituisci tutte le vocali con il simbolo '*'
-for vocale in vocali:
-    stringa = stringa.replace(vocale, '*')
 
-print("Stringa con vocali sostituite:", stringa)
+
 
 
 
