@@ -65,9 +65,14 @@ stringa_senza_spazi = stringa.lstrip()
 print("Stringa senza spazi iniziali:", stringa_senza_spazi)
 
 # Sostituisci tutte le vocali con il simbolo '*'
-vocali = "aeiouAEIOU"
-stringa_sostituita = ''.join('*' if c in vocali else c for c in stringa_senza_spazi)
-print("Stringa con vocali sostituite:", stringa_sostituita)
+
+# Sostituisci tutte le vocali con il simbolo '*'
+for vocale in vocali:
+    stringa = stringa.replace(vocale, '*')
+
+print("Stringa con vocali sostituite:", stringa)
+
+
 
 # Verifica se la stringa inizia con una determinata parola e finisce con un'altra
 inizio = input("Inserisci la parola con cui dovrebbe iniziare la stringa: ")
