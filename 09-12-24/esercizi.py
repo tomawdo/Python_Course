@@ -67,7 +67,17 @@ print("Stringa senza spazi iniziali:", stringa_senza_spazi)
 # Sostituisci tutte le vocali con il simbolo '*'
 
 
+# Definizione delle vocali
+vocali = "aeiouAEIOU"
 
+# Chiedi all'utente una stringa
+stringa = input("Inserisci una stringa: ")
+
+# Sostituisci tutte le vocali con il simbolo '*'
+for vocale in vocali:
+    stringa = stringa.replace(vocale, '*')
+
+print("Stringa con vocali sostituite:", stringa)
 
 
 
