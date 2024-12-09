@@ -47,3 +47,12 @@ print(f"La parola '{parola}' appare {conteggio} volta/e nella frase.")
 print("Frase in maiuscolo:", frase.upper())
 print("Frase in minuscolo:", frase.lower())
 print("Frase con la prima lettera maiuscola:", frase.capitalize())
+
+
+# ESERCIZIO 3: usa i metodi strip, replace, startswith, endswith, join, insieme a slicing e indexing.
+# Chiedi all'utente una stringa e fai quanto segue:
+# - rimuovi gli spazi iniziali
+# - sostituisci tutte le vocali con un simbolo (*)
+# - Verfica se la stringa inizia con una determinata parola e finsice con un'altra
+# - stampa la stringa inversa usando slicing
+# - unisci i caratteri della stringa con un separatore
