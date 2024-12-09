@@ -6,7 +6,7 @@ targhe = ["AB345CV", "FR678AM", "ER772GD"]
 print(targhe)
 
 numeri = [10, 20, 30 ,40]
-print(numeri[28-11-24])
+print(numeri[])
 
 a = 26-11-24
 b = 5
