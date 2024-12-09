@@ -1,6 +1,5 @@
 import datetime
 
-'''
 # ESERCIZIO 1: Scrivi un programma che chieda all'utente che svoga le seguenti operazioni:
 # - trova la lunghezza della stringa
 # - determina il carattere minimo e massimo in base all'ordine alfabetico
@@ -61,7 +60,7 @@ print("Frase con la prima lettera maiuscola:", stringa_c.capitalize())
 # Chiedi all'utente una stringa e fai quanto segue:
 # - rimuovi gli spazi iniziali
 # - sostituisci tutte le vocali con un simbolo (*)
-# - verfica se la stringa inizia con una determinata parola e finsice con un'altra
+# - verifica se la stringa inizia con una determinata parola e finisce con un'altra
 # - stampa la stringa inversa usando slicing
 # - unisci i caratteri della stringa con un separatore
 
@@ -100,8 +99,6 @@ print("Stringa inversa:", inversa)
 separatore = input("Inserisci un separatore: ")
 unita = separatore.join(senza_spazi)
 print("Stringa con caratteri uniti dal separatore:", unita)
-
-'''
 
 nome = input("Come ti chiami? ")
 eta = int(input("Inserisci la tua eta "))
