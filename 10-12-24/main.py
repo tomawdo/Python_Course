@@ -1,5 +1,5 @@
-dmi# LISTE
-'''
+# LISTE
+
 # Esempio di list comprehension
 city_names = ["Torino", "Milano", "Roma", "Napoli", "Messina"]
 
@@ -23,7 +23,6 @@ for brand in y: x.append(brand) # metodo con ciclo for
 x.extend(y) # metodo con extend()
 
 print(x)
-'''
 
 # TUPLE: sono ordinate, indicizzate, non modificabili e permettono duplicati
 
@@ -36,18 +35,14 @@ print(y)
 print(type(z))
 
 
+# START ESERCIZIO
 
-
-
-
-# Esercizio: Scrivete programmi che legano una riga di dati in ingresso sotto forma di stringa e visualizzino quanto segue:
+# Scrivete programmi che legano una riga di dati in ingresso sotto forma di stringa e visualizzino quanto segue:
 # - le sole lettere maiuscole della stringa
 # - partire della seconda lettera della stringa, una lettera viene visualizzata e l'altra no alternativamente
 # - la stringa con tutte le vocali sostituita da un carattere a scelta (_)
 # - il numero in cifre presenti nella stringa
 
-
-# Input: leggere una stringa
 stringa = input("Inserisci una stringa: ")
 
 # 1. Lettere maiuscole
@@ -78,9 +73,10 @@ numeri_totali = 0
 for numero in "0123456789":
     numeri_totali += stringa.count(numero)
 print("Numeri presenti nella stringa:", numeri_totali)
+# FINE ESERCIZIO
 
 
-
+# START ESERCIZIO
 # chiedi al computer di generare un numero casuale
 # utente deve indovinare il numero
 # se il numero inserito è troppo alto "troppo alto"
@@ -88,9 +84,7 @@ print("Numeri presenti nella stringa:", numeri_totali)
 # se il numero inserito è corretto "corretto"
 # max tre tentativi
 
-
-
-import random
+import random # importo modulo random
 
 # Genera un numero casuale tra 1 e 10
 numero_casuale = random.randint(1, 10)
@@ -111,15 +105,15 @@ for tentativo in range(1, 4):
 
     if tentativo == 3:
         print(f"Hai finito i tentativi. Il numero corretto era {numero_casuale}.")
+# FINE ESERCIZIO
 
 
-
+# START ESERCIZIO
 # Chiedi all'utene di inserire 3 numeri.
 # stampa il numero più alto
 # stabilisci se il carattere inserito dall'utente è una voale
 
-
-# Chiedere all'utente di inserire 3 numeri
+# chiedo all'utente di inserire 3 numeri
 num1 = float(input("Inserisci il primo numero: "))
 num2 = float(input("Inserisci il secondo numero: "))
 num3 = float(input("Inserisci il terzo numero: "))
@@ -128,14 +122,7 @@ num3 = float(input("Inserisci il terzo numero: "))
 massimo = max(num1, num2, num3)
 print("Il numero più alto è:", massimo)
 
-# Chiedere all'utente di inserire un carattere
-carattere = input("Inserisci un carattere: ").lower()
-
-# Stabilire se il carattere è una vocale
-if carattere in "aeiou":
-    print(f"Il carattere '{carattere}' è una vocale.")
-else:
-    print(f"Il carattere '{carattere}' non è una vocale.")
+carattere = input("Inserisci un carattere: ").lower() # chiedo all'utente di inserire un carattere
 
 # Estrarre le vocali
 vocali = ""
@@ -143,5 +130,5 @@ for carattere in stringa:
     if carattere.lower() in "aeiou":
         vocali += carattere
 
-# Stampare le vocali trovate
 print("Le vocali presenti nella stringa sono:", vocali)
+# FINE ESERCIZIO
