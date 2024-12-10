@@ -137,5 +137,11 @@ if carattere in "aeiou":
 else:
     print(f"Il carattere '{carattere}' non è una vocale.")
 
+# Estrarre le vocali
+vocali = ""
+for carattere in stringa:
+    if carattere.lower() in "aeiou":
+        vocali += carattere
 
-
+# Stampare le vocali trovate
+print("Le vocali presenti nella stringa sono:", vocali)
