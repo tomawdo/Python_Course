@@ -114,5 +114,10 @@ for tentativo in range(1, 4):
 
 
 
+# Chiedi all'utene di inserire 3 numeri.
+# stampa il numero più alto
+# stabilisci se il carattere inserito dall'utente è una voale
+
+
 
 
