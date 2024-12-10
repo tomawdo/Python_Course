@@ -1,4 +1,4 @@
-mi# LISTE
+dmi# LISTE
 '''
 # Esempio di list comprehension
 city_names = ["Torino", "Milano", "Roma", "Napoli", "Messina"]
@@ -118,6 +118,24 @@ for tentativo in range(1, 4):
 # stampa il numero più alto
 # stabilisci se il carattere inserito dall'utente è una voale
 
+
+# Chiedere all'utente di inserire 3 numeri
+num1 = float(input("Inserisci il primo numero: "))
+num2 = float(input("Inserisci il secondo numero: "))
+num3 = float(input("Inserisci il terzo numero: "))
+
+# Trovare e stampare il numero più alto
+massimo = max(num1, num2, num3)
+print("Il numero più alto è:", massimo)
+
+# Chiedere all'utente di inserire un carattere
+carattere = input("Inserisci un carattere: ").lower()
+
+# Stabilire se il carattere è una vocale
+if carattere in "aeiou":
+    print(f"Il carattere '{carattere}' è una vocale.")
+else:
+    print(f"Il carattere '{carattere}' non è una vocale.")
 
 
 
