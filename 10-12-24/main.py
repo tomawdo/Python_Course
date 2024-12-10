@@ -73,11 +73,8 @@ for carattere in stringa:
         sostituita += carattere
 print("Stringa con vocali sostituite:", sostituita)
 
-# 4. Numeri presenti nella stringa
-numeri = ""
-for carattere in stringa:
-    if carattere.isdigit():
-        numeri += carattere
-print("Numeri presenti nella stringa:", numeri)
-
-
+# 4. Contare i numeri presenti nella stringa
+numeri_totali = 0
+for numero in "0123456789":
+    numeri_totali += stringa.count(numero)
+print("Numeri presenti nella stringa:", numeri_totali)
