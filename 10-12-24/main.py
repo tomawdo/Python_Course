@@ -90,7 +90,27 @@ print("Numeri presenti nella stringa:", numeri_totali)
 
 
 
+import random
 
+# Genera un numero casuale tra 1 e 10
+numero_casuale = random.randint(1, 10)
+
+print("Indovina il numero tra 1 e 10. Hai 3 tentativi!")
+
+for tentativo in range(1, 4):
+    # Chiede all'utente di inserire un numero
+    numero_utente = int(input(f"Tentativo {tentativo}: "))
+
+    if numero_utente == numero_casuale:
+        print("Corretto! Hai indovinato il numero.")
+        break
+    elif numero_utente < numero_casuale:
+        print("Troppo basso.")
+    else:
+        print("Troppo alto.")
+
+    if tentativo == 3:
+        print(f"Hai finito i tentativi. Il numero corretto era {numero_casuale}.")
 
 
 
