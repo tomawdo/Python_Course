@@ -1,4 +1,4 @@
-# LISTE
+mi# LISTE
 '''
 # Esempio di list comprehension
 city_names = ["Torino", "Milano", "Roma", "Napoli", "Messina"]
@@ -47,6 +47,37 @@ print(type(z))
 # - il numero in cifre presenti nella stringa
 
 
+# Input: leggere una stringa
+stringa = input("Inserisci una stringa: ")
 
+# 1. Lettere maiuscole
+maiuscole = ""
+for carattere in stringa:
+    if carattere.isupper():
+        maiuscole += carattere
+print("Lettere maiuscole:", maiuscole)
+
+# 2. Lettere alternate (dalla seconda lettera)
+alternate = ""
+for i in range(1, len(stringa), 2):
+    alternate += stringa[i]
+print("Lettere alternate (da seconda posizione):", alternate)
+
+# 3. Stringa con vocali sostituite da "_"
+vocali = "aeiouAEIOU"
+sostituita = ""
+for carattere in stringa:
+    if carattere in vocali:
+        sostituita += "_"
+    else:
+        sostituita += carattere
+print("Stringa con vocali sostituite:", sostituita)
+
+# 4. Numeri presenti nella stringa
+numeri = ""
+for carattere in stringa:
+    if carattere.isdigit():
+        numeri += carattere
+print("Numeri presenti nella stringa:", numeri)
 
 
