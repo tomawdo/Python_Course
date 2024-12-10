@@ -36,7 +36,6 @@ print(type(z))
 
 
 # START ESERCIZIO
-
 # Scrivete programmi che legano una riga di dati in ingresso sotto forma di stringa e visualizzino quanto segue:
 # - le sole lettere maiuscole della stringa
 # - partire della seconda lettera della stringa, una lettera viene visualizzata e l'altra no alternativamente
