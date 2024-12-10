@@ -78,3 +78,21 @@ numeri_totali = 0
 for numero in "0123456789":
     numeri_totali += stringa.count(numero)
 print("Numeri presenti nella stringa:", numeri_totali)
+
+
+
+# chiedi al computer di generare un numero casuale
+# utente deve indovinare il numero
+# se il numero inserito è troppo alto "troppo alto"
+# se il numero nserito è troppo basso "troppo basso"
+# se il numero inserito è corretto "corretto"
+# max tre tentativi
+
+
+
+
+
+
+
+
+
