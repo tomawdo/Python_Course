@@ -56,6 +56,22 @@ while indice < len(parola):
 # quando esaurisce i tentativi chiediamo se vuole giocare nuovamente
 
 
+print("Devi inserire un numero pari e uno dispari da sommare.")
 
+# Chiedi un numero pari
+numero1 = int(input("Inserisci un numero pari: "))
+while numero1 % 2 != 0:  # Controlla se il numero non è pari
+    print("Il numero non è pari. Riprova.")
+    numero1 = int(input("Inserisci un numero pari: "))
+
+# Chiedi un numero dispari
+numero2 = int(input("Inserisci un numero dispari: "))
+while numero2 % 2 == 0:  # Controlla se il numero non è dispari
+    print("Il numero non è dispari. Riprova.")
+    numero2 = int(input("Inserisci un numero dispari: "))
+
+# Somma e stampa il risultato
+somma = numero1 + numero2
+print(f"La somma dei due numeri è: {somma}")
 
 
