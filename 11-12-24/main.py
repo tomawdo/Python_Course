@@ -47,7 +47,13 @@ while indice < len(parola):
 
 
 
+# ESERCIZIO 1: richiedi all'utente di inserire due numeri a sommare. Uno deve essere pari, l'altro dispari
 
+#ESERCIZIO 2:
+# indovina un numero segreto e pensato dal computer
+# hai tre tentativi
+# dopo ogni tentativo ti sarà indicato quanti te ne restano (es. 2 tentativi rimasti)
+# quando esaurisce i tentativi chiediamo se vuole giocare nuovamente
 
 
 
