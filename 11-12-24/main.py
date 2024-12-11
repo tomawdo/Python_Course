@@ -31,6 +31,20 @@ print("Grazie per aver giocato!")
 # chiedi all'utente di inserire una parola
 #stampa solo le consonanti con il ciclo while
 
+# Chiedi all'utente di inserire una parola
+parola = input("Inserisci una parola: ")
+
+# Inizializza un indice per il ciclo
+indice = 0
+
+# Ciclo while per scorrere ogni carattere della parola
+while indice < len(parola):
+    carattere = parola[indice]
+    # Controlla se il carattere è una consonante
+    if carattere.lower() not in 'aeiou':
+        print(carattere, end="")
+    indice += 1
+
 
 
 
