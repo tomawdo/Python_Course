@@ -80,33 +80,39 @@ print(f"La somma dei due numeri è: {somma}")
 
 import random
 
-print("Sto pensando a un numero tra 1 e 100. Hai 3 tentativi per indovinarlo.")
 
-# Genera un numero segreto casuale
-numero_segreto = random.randint(1, 100)
-tentativi = 3
+#ESERCIZIO 2: indovina un numero segreto e pensato dal computer
+# max 3 tentativi
+# dopo ogni tentativo ti sarà indicato quanti te ne restano (es. 2 tentativi rimasti)
+# quando esaurisce i tentativi chiediamo se vuole giocare nuovamente
 
-# Ciclo per i tentativi
-while tentativi > 0:
-    guess = int(input(f"Indovina il numero (tentativi rimasti: {tentativi}): "))
-    if guess == numero_segreto:
-        print("Complimenti! Hai indovinato il numero segreto.")
-        break
-    elif guess < numero_segreto:
-        print("Troppo basso!")
-    else:
-        print("Troppo alto!")
-    
-    tentativi -= 1
+n_segreto = random.randint(1, 20)
+tentativo = 3
+inizio = ""
+rigioca = ""
+ytd = datetime.datetime.now()
 
-# Controllo se i tentativi sono finiti
-if tentativi == 0:
-    print(f"Hai esaurito i tentativi! Il numero segreto era: {numero_segreto}")
+nome = input("Come ti chiami? ")
+anno_nascita = int(input("Inserisci l'anno di nascita: "))
+start = ytd.year - anno_nascita
+print(f"Benvenuto {nome}! \nHai {start} anni quindi puoi giocare.")
 
-# Chiedi se vuole giocare di nuovo
-gioca_ancora = input("Vuoi giocare di nuovo? (sì/no): ").strip().lower()
-if gioca_ancora == "sì":
-    # Ricarica lo script o ripeti
-    print("Ricomincia lo script per giocare di nuovo!")
+
+if inizio == start:
+    while tentativo > 0:
+        indovina = int(input(f"Indovia il numero (tentativi riasti: {tentativo}): "))
+        if indovina == n_segreto:
+            print("Numero indovinato")
+            break
+        elif indovina < n_segreto:
+            print("Troppo basso. Riprova!")
+        else:
+            print("Troppo alto. Riprova!")
+        tentativo -= 1
+    if tentativo == 0:
+        print(f"Hai esaurito tutti i tentativi. Il nr segreto era: {n_segreto}")
+        print("Vuoi giocare nuovamente? (sì/no)")
+elif rigioca == "sì":
+    print("Rigioca script")
 else:
-    print("Grazie per aver giocato!")
+    print("Alla prossima!")
