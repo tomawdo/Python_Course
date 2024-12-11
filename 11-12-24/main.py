@@ -75,3 +75,38 @@ somma = numero1 + numero2
 print(f"La somma dei due numeri è: {somma}")
 
 
+
+
+
+import random
+
+print("Sto pensando a un numero tra 1 e 100. Hai 3 tentativi per indovinarlo.")
+
+# Genera un numero segreto casuale
+numero_segreto = random.randint(1, 100)
+tentativi = 3
+
+# Ciclo per i tentativi
+while tentativi > 0:
+    guess = int(input(f"Indovina il numero (tentativi rimasti: {tentativi}): "))
+    if guess == numero_segreto:
+        print("Complimenti! Hai indovinato il numero segreto.")
+        break
+    elif guess < numero_segreto:
+        print("Troppo basso!")
+    else:
+        print("Troppo alto!")
+    
+    tentativi -= 1
+
+# Controllo se i tentativi sono finiti
+if tentativi == 0:
+    print(f"Hai esaurito i tentativi! Il numero segreto era: {numero_segreto}")
+
+# Chiedi se vuole giocare di nuovo
+gioca_ancora = input("Vuoi giocare di nuovo? (sì/no): ").strip().lower()
+if gioca_ancora == "sì":
+    # Ricarica lo script o ripeti
+    print("Ricomincia lo script per giocare di nuovo!")
+else:
+    print("Grazie per aver giocato!")
