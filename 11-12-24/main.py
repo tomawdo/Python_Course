@@ -25,3 +25,17 @@ while tentativo != numero_segreto:
         print("Per favore, inserisci un numero valido.")
 
 print("Grazie per aver giocato!")
+
+
+
+# chiedi all'utente di inserire una parola
+#stampa solo le consonanti con il ciclo while
+
+
+
+
+
+
+
+
+
