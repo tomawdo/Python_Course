@@ -30,3 +30,8 @@ def fai_somma(num1, num2):
 
 x = fai_somma(2, 2)
 print(x)
+
+
+# chiedere all'utente quanti esami ha dato
+# chiedere all'utente i voti degli esami ed inserirli in una lista
+# calcolare la media ponderata degli esami dati sia in trentesimi e sia in 110
