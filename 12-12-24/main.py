@@ -51,9 +51,15 @@ for i in range(numero_esami):
     voti.append(voto)
     crediti.append(credito)
 
+# Calcola la somma pesata e il totale dei crediti con un for esplicito
+somma_pesata = 0
+totale_crediti = 0
+
+for i in range(numero_esami):
+    somma_pesata += voti[i] * crediti[i]
+    totale_crediti += crediti[i]
+
 # Calcola la media ponderata in trentesimi
-somma_pesata = sum(v * c for v, c in zip(voti, crediti))
-totale_crediti = sum(crediti)
 media_ponderata_trentesimi = somma_pesata / totale_crediti
 
 # Converti la media in 110
