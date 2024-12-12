@@ -1,6 +1,5 @@
 import datetime
 import random
-import time
 
 '''
 # Genera un numero casuale tra 1 e 100
@@ -28,7 +27,6 @@ while tentativo != numero_segreto:
 print("Grazie per aver giocato!")
 
 
-
 # chiedi all'utente di inserire una parola
 #stampa solo le consonanti con il ciclo while
 
@@ -49,24 +47,17 @@ while indice < len(parola):
 
 # ESERCIZIO 1: richiedi all'utente di inserire due numeri a sommare. Uno deve essere pari, l'altro dispari
 
-#ESERCIZIO 2:
-# indovina un numero segreto e pensato dal computer
-# hai tre tentativi
-# dopo ogni tentativo ti sarà indicato quanti te ne restano (es. 2 tentativi rimasti)
-# quando esaurisce i tentativi chiediamo se vuole giocare nuovamente
-
-
 print("Devi inserire un numero pari e uno dispari da sommare.")
 
 # Chiedi un numero pari
 numero1 = int(input("Inserisci un numero pari: "))
-while numero1 % 2 != 0:  # Controlla se il numero non è pari
+while numero1 % 2 != 0:
     print("Il numero non è pari. Riprova.")
     numero1 = int(input("Inserisci un numero pari: "))
 
 # Chiedi un numero dispari
 numero2 = int(input("Inserisci un numero dispari: "))
-while numero2 % 2 == 0:  # Controlla se il numero non è dispari
+while numero2 % 2 == 0:
     print("Il numero non è dispari. Riprova.")
     numero2 = int(input("Inserisci un numero dispari: "))
 
@@ -75,50 +66,40 @@ somma = numero1 + numero2
 print(f"La somma dei due numeri è: {somma}")
 
 '''
+
 #ESERCIZIO 2: indovina un numero segreto e pensato dal computer
 # max 3 tentativi
 # dopo ogni tentativo ti sarà indicato quanti te ne restano (es. 2 tentativi rimasti)
 # quando esaurisce i tentativi chiediamo se vuole giocare nuovamente
 
-
-
 nome = input("Inserisci il tuo nome: ")
 
-while True:  # Ciclo principale per il riavvio del gioco
-    print(f"Benvenuto {nome}! \nPer giocare devi prima inserire il tuo anno di nascita.")
-
+anno_nascita = input(f"{nome}, inserisci il tuo anno di nascita: ")
+if not anno_nascita.isdigit():
+    print("Devi inserire un numero valido.")
     anno_nascita = input("Inserisci il tuo anno di nascita: ")
-    if not anno_nascita.isdigit():
-        print("Devi inserire un numero valido.")
-        continue
 
-    anno_nascita = int(anno_nascita)
-    anno_corrente = datetime.datetime.now()
-    eta = anno_corrente.year - anno_nascita
+anno_nascita = int(anno_nascita)
+anno_corrente = datetime.datetime.now()
+eta = anno_corrente.year - anno_nascita
 
-    if eta < 0 or anno_nascita < 1900:
-        print("Anno non valido. Riprova.")
-        continue
+while eta > 18:  # Ciclo principale per il riavvio del gioco
 
-    if eta < 18:
-        print("Mi dispiace, sei minorenne. Il gioco d'azzardo non è permesso ai minori di 18 anni.")
-        break
-
-    print("Ho generato un numero tra 1 e 10. Hai 3 tentativi per indovinarlo.")
+    print(f"{nome}, ho generato un numero tra 1 e 10. Hai 3 tentativi per azzeccarlo.")
     numero_segreto = random.randint(1, 10)
     tentativi = 3
 
     while tentativi > 0:
-        guess = input(f"Indovina il numero (tentativi rimasti: {tentativi}): ")
-        if not guess.isdigit():
+        indovino = input(f"Indovina il numero (tentativi rimasti: {tentativi}): ")
+        if not indovino.isdigit():
             print("Devi inserire un numero valido.")
             continue
 
-        guess = int(guess)
-        if guess == numero_segreto:
+        indovino = int(indovino)
+        if indovino == numero_segreto:
             print("Complimenti! Hai indovinato il numero segreto.")
             break
-        elif guess < numero_segreto:
+        elif indovino < numero_segreto:
             print("Troppo basso!")
         else:
             print("Troppo alto!")
@@ -132,5 +113,6 @@ while True:  # Ciclo principale per il riavvio del gioco
     if gioca_ancora != "sì":
         print("Grazie per aver giocato! Alla prossima!")
         break
-
+else:
+    print("Mi dispiace, sei minorenne. Il gioco d'azzardo non è permesso ai minori di 18 anni.")
 
