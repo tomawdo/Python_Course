@@ -10,8 +10,7 @@ if posizioni_vocali: # Stampa le posizioni delle vocali
     print("Le vocali si trovano alle seguenti posizioni:", posizioni_vocali)
 else:
     print("Non ci sono vocali nella parola inserita.")
-    
-    
+
 '''    
 Quando utilizzate uno sportello bancario automatico (ATM, automatic teller machine) con la vostra
 carta, dovete usare un numero identificativo personale (PIN, personal identification number) per
