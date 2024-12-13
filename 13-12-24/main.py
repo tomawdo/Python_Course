@@ -53,4 +53,8 @@ while tentativi < MAX_TENTATIVI:
             print("La banca ha bloccato la tua carta.")
 
 
-
+# scrivete un programma che legga una sequenza di numeri interi che visualizzino quanto segue:
+# - valore minimo e valore massimo tra quelli acquisiti
+# - i pari ed i dispari
+# - le somme parziali di tutti i numeri acqusiti, calcolate e visualizzate dopo ogni 
+# nuova acquisizione (es. i valori in ingresso sono 1729, il programma visualizzerà 1 8 10 19)
