@@ -30,3 +30,20 @@ terminate il programma;
 e, se avete chiesto il PIN meno di tre volte, chiedetelo di nuovo;
 - se l’utente inserisce un numero sbagliato per tre volte, visualizzate il messaggio “La banca ha
 bloccato la tua carta” e terminate il programma
+
+
+PIN_CORRETTO = "1234"  # PIN corretto
+tentativi = 0  # Numero di tentativi effettuati
+
+while tentativi < 3:
+    pin_inserito = input("Inserisci il PIN: ")
+    
+    if pin_inserito == PIN_CORRETTO:
+        print("Il tuo PIN è corretto.")
+        break
+    else:
+        tentativi += 1
+        print("Il tuo PIN non è corretto.")
+        
+        if tentativi == 3:
+            print("La banca ha bloccato la tua carta.")
