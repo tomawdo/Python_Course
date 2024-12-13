@@ -17,7 +17,7 @@ else:
     print("Non ci sono vocali nella parola inserita.")
     
     
-    
+'''    
 Quando utilizzate uno sportello bancario automatico (ATM, automatic teller machine) con la vostra
 carta, dovete usare un numero identificativo personale (PIN, personal identification number) per
 poter accedere al vostro conto. Se un utente sbaglia tre volte l’inserimento del PIN, la macchina
@@ -30,7 +30,7 @@ terminate il programma;
 e, se avete chiesto il PIN meno di tre volte, chiedetelo di nuovo;
 - se l’utente inserisce un numero sbagliato per tre volte, visualizzate il messaggio “La banca ha
 bloccato la tua carta” e terminate il programma
-
+'''
 
 PIN_CORRETTO = "1234"  # PIN corretto
 MAX_TENTATIVI = 3  # Numero massimo di tentativi
@@ -53,12 +53,11 @@ while tentativi < MAX_TENTATIVI:
             print("La banca ha bloccato la tua carta.")
 
 
-# scrivete un programma che legga una sequenza di numeri interi che visualizzino quanto segue:
+# Scrivi un programma che legga una sequenza di numeri interi che visualizzino quanto segue:
 # - valore minimo e valore massimo tra quelli acquisiti
-# - i pari ed i dispari
-# - le somme parziali di tutti i numeri acqusiti, calcolate e visualizzate dopo ogni 
+# - i pari e dispari
+# - le somme parziali di tutti i numeri acquisiti, calcolate e visualizzate dopo ogni
 # nuova acquisizione (es. i valori in ingresso sono 1729, il programma visualizzerà 1 8 10 19)
-
 
 numeri = []  # Lista per memorizzare i numeri acquisiti
 somma_totale = 0  # Somma parziale dei numeri inseriti
