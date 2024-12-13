@@ -33,9 +33,10 @@ bloccato la tua carta” e terminate il programma
 
 
 PIN_CORRETTO = "1234"  # PIN corretto
+MAX_TENTATIVI = 3  # Numero massimo di tentativi
 tentativi = 0  # Numero di tentativi effettuati
 
-while tentativi < 3:
+while tentativi < MAX_TENTATIVI:
     pin_inserito = input("Inserisci il PIN: ")
     
     if pin_inserito == PIN_CORRETTO:
@@ -43,7 +44,13 @@ while tentativi < 3:
         break
     else:
         tentativi += 1
+        tentativi_rimasti = MAX_TENTATIVI - tentativi
         print("Il tuo PIN non è corretto.")
         
-        if tentativi == 3:
+        if tentativi_rimasti > 0:
+            print(f"Hai ancora {tentativi_rimasti} tentativi.")
+        else:
             print("La banca ha bloccato la tua carta.")
+
+
+
