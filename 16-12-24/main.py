@@ -97,6 +97,12 @@ for nome, voto in alunni.items():
     print(f"{nome}: {voto_in_decimi:.1f}")
 
 
+# creare un dizionario strutturato in cognome, voto, materia. E' una classe con cognome voto e materia. Se la media dei voti è minore di 6, i voti vengono alzati secondo la seguente regola:
+# - i voti minori di 4.5 (incluso) vengono alzati di 0.75 
+# - i voti tra 5 e 6.5 (escluso) vengono alzati di 0.5
+# - i voti compresi tra 6.5 (incluso) e 7 (escluso) vengono alzati di 0.75
+# - gli altri voti non vengono alzati
+
 
 
 
