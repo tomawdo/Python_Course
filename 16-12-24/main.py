@@ -103,6 +103,49 @@ for nome, voto in alunni.items():
 # - i voti compresi tra 6.5 (incluso) e 7 (escluso) vengono alzati di 0.75
 # - gli altri voti non vengono alzati
 
+# 1. Creare il dizionario con i dati della classe
+classe = {
+    "Rossi": {"voto": 5.0, "materia": "Matematica"},
+    "Bianchi": {"voto": 4.5, "materia": "Fisica"},
+    "Verdi": {"voto": 6.8, "materia": "Chimica"},
+    "Neri": {"voto": 7.2, "materia": "Storia"},
+    "Gialli": {"voto": 3.9, "materia": "Inglese"},
+}
 
+# 2. Calcolare la media dei voti
+somma_voti = 0
+numero_studenti = len(classe)
+
+for studente in classe.values():
+    somma_voti += studente["voto"]
+
+media_voti = somma_voti / numero_studenti
+print(f"Media dei voti iniziale: {media_voti:.2f}")
+
+# 3. Applicare le regole per modificare i voti se la media è minore di 6
+if media_voti < 6:
+    for studente in classe.values():
+        voto = studente["voto"]
+        
+        # Applicare le regole di modifica
+        if voto <= 4.5:
+            studente["voto"] += 0.75
+        elif 5 <= voto < 6.5:
+            studente["voto"] += 0.5
+        elif 6.5 <= voto < 7:
+            studente["voto"] += 0.75
+
+# 4. Stampare i risultati
+print("\nVoti aggiornati:")
+for cognome, dati in classe.items():
+    print(f"{cognome}: {dati['voto']:.2f} ({dati['materia']})")
+
+# 5. Calcolare la nuova media dei voti
+somma_voti_aggiornati = 0
+for studente in classe.values():
+    somma_voti_aggiornati += studente["voto"]
+
+nuova_media_voti = somma_voti_aggiornati / numero_studenti
+print(f"\nNuova media dei voti: {nuova_media_voti:.2f}")
 
 
