@@ -59,3 +59,8 @@ for nome, voto in alunni.items():
     print(f"{nome}: {voto}")
 
 print(f"\nLa media dei voti è: {media_voti:.2f}")
+
+
+# chiedere in input un nome presente nella lista e modificare il voto dello studente (chiedere in input anche il nuovo voto)
+
+# stampare a video i voti di ogni alunno con il voto espresso in decimi anziché in trentesimi
