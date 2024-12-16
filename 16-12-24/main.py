@@ -39,3 +39,23 @@ for nome, voto in alunni.items():
     print(f"{nome}: {voto}")
 
 print(f"\nLa media dei voti è: {media_voti:.2f}")
+
+
+# Lista di nomi predefiniti e voti
+nomi = ["Anna", "Marco", "Luca", "Sara", "Elena", "Giulia", "Paolo", "Francesca", "Giovanni", "Marta"]
+voti = [28, 25, 30, 27, 24, 26, 29, 22, 21, 23]
+
+# Creazione del dizionario con un ciclo for
+alunni = {}
+for i in range(10):  # Massimo 10 alunni
+    alunni[nomi[i]] = voti[i]
+
+# Calcolo della media dei voti
+media_voti = sum(alunni.values()) / len(alunni)
+
+# Stampa del dizionario e della media
+print("I voti degli alunni sono:")
+for nome, voto in alunni.items():
+    print(f"{nome}: {voto}")
+
+print(f"\nLa media dei voti è: {media_voti:.2f}")
