@@ -66,25 +66,37 @@ print(f"\nLa media dei voti è: {media_voti:.2f}")
 # stampare a video i voti di ogni alunno con il voto espresso in decimi anziché in trentesimi
 
 # Lista di nomi predefiniti e voti
-nomi = ["Anna", "Marco", "Luca", "Sara", "Elena", "Giulia", "Paolo", "Francesca", "Giovanni", "Marta"]
-voti = [28, 25, 30, 27, 24, 26, 29, 22, 21, 23]
 
-# Creazione del dizionario con un ciclo for
-alunni = {}
-for i in range(10):  # Massimo 10 alunni
-    alunni[nomi[i]] = voti[i]
+# Creazione del dizionario con massimo 10 alunni e i rispettivi voti
+alunni = {
+    "Anna": 28,
+    "Marco": 25,
+    "Luca": 30,
+    "Sara": 27,
+    "Elena": 24,
+    "Giulia": 26,
+    "Paolo": 29,
+    "Francesca": 22,
+    "Giovanni": 21,
+    "Marta": 23
+}
 
-# Chiedere all'utente di modificare il voto di uno studente
+# Chiedere il nome dello studente e il nuovo voto
 nome = input("Inserisci il nome dello studente per modificare il voto: ").strip()
 
 if nome in alunni:
     nuovo_voto = float(input(f"Inserisci il nuovo voto per {nome}: "))
     alunni[nome] = nuovo_voto
 else:
-    print("Nome non trovato nella lista.")
+    print("Nome non trovato nel dizionario.")
 
-# Stampare i voti in decimi anziché in trentesimi
+# Stampare i voti in decimi (convertiti da trentesimi)
 print("\nI voti degli alunni in decimi sono:")
 for nome, voto in alunni.items():
     voto_in_decimi = voto / 3  # Conversione in decimi
     print(f"{nome}: {voto_in_decimi:.1f}")
+
+
+
+
+
