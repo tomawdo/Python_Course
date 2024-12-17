@@ -8,15 +8,12 @@ print(d.get("name"))
 
 d = {"name": "Alice", 1: "Python", (1, 2): [1, 2, 4]}
 
-# Iterare sulle chiavi e stampare chiave e valore
 for key in d:
     print(f"Chiave: {key}, Valore: {d[key]}")
 
-
-# ESERCIZIO in PyTHON - creare un dizionario con chiave - valore (nome - voto universitario) max 10 alunni
+# ESERCIZIO - creare un dizionario con chiave - valore (nome - voto universitario) max 10 alunni
 # visualizzare a video la media dei voti di tutti gli alunni
 
-# Creazione di un dizionario predefinito con massimo 10 alunni
 alunni = {
     "Anna": 28,
     "Marco": 25,
@@ -55,7 +52,7 @@ for nome, voto in alunni.items():
 
 print(f"\nLa media dei voti è: {media_voti:.2f}")
 
-# chiedere in input un nome presente nella lista e
+# chiedere di inserire un nome presente nella lista e
 # modificare il voto dello studente (chiedere in input anche il nuovo voto)
 # stampare a video i voti di ogni alunno con il voto espresso in decimi anziché in trentesimi
 # Lista di nomi predefiniti e voti
@@ -73,7 +70,6 @@ alunni = {
     "Marta": 23
 }
 
-# Chiedere il nome dello studente e il nuovo voto
 nome = input("Inserisci il nome dello studente per modificare il voto: ").strip()
 
 if nome in alunni:
@@ -82,14 +78,13 @@ if nome in alunni:
 else:
     print("Nome non trovato nel dizionario.")
 
-# Stampare i voti in decimi (convertiti da trentesimi)
 print("\nI voti degli alunni in decimi sono:")
 for nome, voto in alunni.items():
     voto_in_decimi = voto / 3  # Conversione in decimi
     print(f"{nome}: {voto_in_decimi:.1f}")
 
-
-# Creare un dizionario strutturato in cognome, voto, materia. E' una classe con cognome voto e materia. Se la media dei voti è minore di 6, i voti vengono alzati secondo la seguente regola:
+# Creare un dizionario strutturato in cognome, voto, materia. Una classe con cognome voto e materia.
+# Se la media dei voti è minore di 6, i voti vengono alzati secondo la seguente regola:
 # - i voti minori di 4.5 (incluso) vengono alzati di 0.75 
 # - i voti tra 5 e 6.5 (escluso) vengono alzati di 0.5
 # - i voti compresi tra 6.5 (incluso) e 7 (escluso) vengono alzati di 0.75
@@ -104,8 +99,7 @@ classe = {
     "Gialli": {"voto": 3.9, "materia": "Inglese"},
 }
 
-# 2. Calcolare la media dei voti
-somma_voti = 0
+somma_voti = 0 # media dei voti
 numero_studenti = len(classe)
 
 for studente in classe.values():
@@ -114,26 +108,22 @@ for studente in classe.values():
 media_voti = somma_voti / numero_studenti
 print(f"Media dei voti iniziale: {media_voti:.2f}")
 
-# 3. Applicare le regole per modificare i voti se la media è minore di 6
 if media_voti < 6:
     for studente in classe.values():
         voto = studente["voto"]
-        
-        # Applicare le regole di modifica
-        if voto <= 4.5:
+
+        if voto <= 4.5: # Applicare le regole di modifica
             studente["voto"] += 0.75
         elif 5 <= voto < 6.5:
             studente["voto"] += 0.5
         elif 6.5 <= voto < 7:
             studente["voto"] += 0.75
 
-# 4. Stampare i risultati
-print("\nVoti aggiornati:")
+print("\nVoti aggiornati:") # 4. stampo i risultati
 for cognome, dati in classe.items():
     print(f"{cognome}: {dati['voto']:.2f} ({dati['materia']})")
 
-# 5. Calcolare la nuova media dei voti
-somma_voti_aggiornati = 0
+somma_voti_aggiornati = 0 # Nuova media dei voti
 for studente in classe.values():
     somma_voti_aggiornati += studente["voto"]
 
