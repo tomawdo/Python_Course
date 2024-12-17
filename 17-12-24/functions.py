@@ -33,3 +33,25 @@ def lunghezza(elemento):
     for i in elemento:
         contatore += 1
     return contatore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
