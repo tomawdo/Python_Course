@@ -53,5 +53,24 @@ print(f"Lunghezza: {lunghezza(stringa)}")
 # servono due distinti pezzi di codice: uno definisce la funzione istogramma e l'altro chiede i valori all'utente e li aggiunge a una lista
 # definire la funzione istogramma con un argomento
 
+def istogramma(numeri):
+    """
+    Stampa un istogramma basato sui valori di una lista di numeri.
+    
+    Args:
+        numeri (list): Lista di numeri interi.
+    """
+    for numero in numeri:
+        print('*' * numero)
+        
+        
+# Chiedi all'utente di inserire una lista di numeri separati da virgole
+input_numeri = input("Inserisci una lista di numeri separati da virgole: ")
+
+# Converti l'input in una lista di interi
+lista_numeri = [int(x) for x in input_numeri.split(',')]
+
+# Chiama la funzione `istogramma` con la lista di numeri
+istogramma(lista_numeri)
 
 
