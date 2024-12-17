@@ -39,3 +39,19 @@ if operatore == "+":
 
 # chiedi all'utente di inserire una lista di parole (max 5)
 # tramite una funzione stampo un elenco di parole che inziano con la "s"
+
+
+def filtra_parole_con_s():
+    # Chiedo all'utente di inserire una lista di parole (max 5)
+    parole = input("Inserisci fino a 5 parole separate da uno spazio: ").split()[:5]
+    
+    # Filtro le parole che iniziano con la lettera 's' (o 'S')
+    parole_con_s = [parola for parola in parole if parola.lower().startswith('s')]
+    
+    # Stampo l'elenco delle parole che iniziano con 's'
+    print("\nLe parole che iniziano con la lettera 's' sono:")
+    for parola in parole_con_s:
+        print(parola)
+
+# Eseguo la funzione
+filtra_parole_con_s()
