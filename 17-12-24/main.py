@@ -41,7 +41,7 @@ numeri_max(numeri)
 # inizializzo la variabile contatore a 0
 # definisco una variabile con un argomento
 # creo un ciclo for che analizzi tutti gli elementi presenti nell'argomento della variabile
-# per ogni elemento presente nell'argoomento della variabile aggiungo 1 e riassegno contatore
+# per ogni elemento presente nell'argomento della variabile aggiungo 1 e riassegno contatore
 # uso return per restituire il valore di contatore
 # test funzione su una stringa inserita dall'utente
 stringa = input("Inserisci una stringa: ")
