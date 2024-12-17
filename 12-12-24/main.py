@@ -36,11 +36,8 @@ print(x)
 # chiedere all'utente i voti degli esami ed inserirli in una lista
 # calcolare la media ponderata degli esami dati sia in trentesimi e sia in 110
 
-
-# Chiedi all'utente quanti esami ha dato
 numero_esami = int(input("Quanti esami hai dato? "))
 
-# Inizializza le liste per i voti e i crediti
 voti = []
 crediti = []
 
