@@ -74,3 +74,24 @@ lista_numeri = [int(x) for x in input_numeri.split(',')]
 istogramma(lista_numeri)
 
 
+def albero_di_natale(altezza):
+    """
+    Stampa un albero di Natale con asterischi.
+
+    Args:
+        altezza (int): Numero di livelli dell'albero.
+    """
+    for i in range(1, altezza + 1):
+        # Spazi a sinistra per centrare il livello
+        spazi = ' ' * (altezza - i)
+        # Asterischi per il livello attuale
+        stelle = '*' * (2 * i - 1)
+        print(spazi + stelle)
+    # Stampa il tronco
+    tronco = ' ' * (altezza - 1) + '|'
+    print(tronco)
+
+# Chiedi all'utente l'altezza dell'albero
+altezza = int(input("Inserisci l'altezza dell'albero di Natale: "))
+albero_di_natale(altezza)
+
