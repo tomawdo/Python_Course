@@ -40,33 +40,25 @@ for nome, voto in alunni.items():
 
 print(f"\nLa media dei voti è: {media_voti:.2f}")
 
-
-# Lista di nomi predefiniti e voti
 nomi = ["Anna", "Marco", "Luca", "Sara", "Elena", "Giulia", "Paolo", "Francesca", "Giovanni", "Marta"]
 voti = [28, 25, 30, 27, 24, 26, 29, 22, 21, 23]
 
-# Creazione del dizionario con un ciclo for
 alunni = {}
 for i in range(10):  # Massimo 10 alunni
     alunni[nomi[i]] = voti[i]
 
-# Calcolo della media dei voti
 media_voti = sum(alunni.values()) / len(alunni)
 
-# Stampa del dizionario e della media
 print("I voti degli alunni sono:")
 for nome, voto in alunni.items():
     print(f"{nome}: {voto}")
 
 print(f"\nLa media dei voti è: {media_voti:.2f}")
 
-
-# chiedere in input un nome presente nella lista e modificare il voto dello studente (chiedere in input anche il nuovo voto)
-
+# chiedere in input un nome presente nella lista e
+# modificare il voto dello studente (chiedere in input anche il nuovo voto)
 # stampare a video i voti di ogni alunno con il voto espresso in decimi anziché in trentesimi
-
 # Lista di nomi predefiniti e voti
-
 # Creazione del dizionario con massimo 10 alunni e i rispettivi voti
 alunni = {
     "Anna": 28,
@@ -97,7 +89,7 @@ for nome, voto in alunni.items():
     print(f"{nome}: {voto_in_decimi:.1f}")
 
 
-# creare un dizionario strutturato in cognome, voto, materia. E' una classe con cognome voto e materia. Se la media dei voti è minore di 6, i voti vengono alzati secondo la seguente regola:
+# Creare un dizionario strutturato in cognome, voto, materia. E' una classe con cognome voto e materia. Se la media dei voti è minore di 6, i voti vengono alzati secondo la seguente regola:
 # - i voti minori di 4.5 (incluso) vengono alzati di 0.75 
 # - i voti tra 5 e 6.5 (escluso) vengono alzati di 0.5
 # - i voti compresi tra 6.5 (incluso) e 7 (escluso) vengono alzati di 0.75
