@@ -1,4 +1,4 @@
-from funzioni import *
+from functions import *
 
 '''
 # Esercizio 1
@@ -46,3 +46,11 @@ numeri_max(numeri)
 # test funzione su una stringa inserita dall'utente
 stringa = input("Inserisci una stringa: ")
 print(f"Lunghezza: {lunghezza(stringa)}")
+
+
+# Esercizio 5 - definisci una funzione istogramma che data una lista di numeri stampi una serie di asterischi
+# Chiedi all'utente di inserire una lista di numeri da trasformare
+# servono due distinti pezzi di codice: uno definisce la funzione istogramma e l'altro chiede i valori all'utente e li aggiunge a una lista
+# definire la funzione istogramma con un argomento
+
+
