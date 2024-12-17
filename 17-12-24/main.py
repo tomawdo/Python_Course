@@ -34,3 +34,8 @@ if operatore == "+":
             print("Errore: divisione per zero.")
     else:
         print("Operazione non valida.")
+
+
+
+# chiedi all'utente di inserire una lista di parole (max 5)
+# tramite una funzione stampo un elenco di parole che inziano con la "s"
