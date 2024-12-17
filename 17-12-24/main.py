@@ -14,3 +14,16 @@
 # per ogni elemento presente nell'argoomento della variabile aggiungo 1 e riassegno contatore
 # uso return per restituire il valore di contatore
 # test funzione su una stringa inserita dall'utente
+
+# Definizione della funzione per calcolare la lunghezza
+def lunghezza(elemento):
+    contatore = 0  # Inizializzo il contatore a 0
+    for _ in elemento:  # Scorro ogni elemento dell'argomento passato
+        contatore += 1  # Incremento il contatore di 1 per ogni elemento
+    return contatore  # Restituisco il valore del contatore
+
+# Test della funzione su una stringa inserita dall'utente
+stringa = input("Inserisci una stringa: ")
+print(f"La lunghezza della stringa è: {lunghezza(stringa)}")
+
+
