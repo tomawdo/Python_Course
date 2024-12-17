@@ -54,3 +54,4 @@ print(f"Lunghezza: {lunghezza(stringa)}")
 # definire la funzione istogramma con un argomento
 
 
+
