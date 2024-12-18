@@ -72,3 +72,20 @@ risultato = numeri_volanti_di_merz(n, regola_somma)
 
 # Output
 print("Numeri volanti di Merz:", risultato)
+
+
+# creare una lista di nomi
+# creare una lista di stipendi 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
