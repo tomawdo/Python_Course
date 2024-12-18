@@ -79,7 +79,35 @@ print("Numeri volanti di Merz:", risultato)
 # creare una funzione che crea un dizionario a partire da queste due liste
 
 
+def crea_dizionario(nomi, stipendi):
+    """
+    Crea un dizionario a partire da due liste: nomi e stipendi.
+    
+    Args:
+        nomi (list): Lista di nomi.
+        stipendi (list): Lista di stipendi.
+        
+    Returns:
+        dict: Dizionario con i nomi come chiavi e gli stipendi come valori.
+    """
+    # Verifica che le liste abbiano la stessa lunghezza
+    if len(nomi) != len(stipendi):
+        raise ValueError("Le due liste devono avere la stessa lunghezza.")
+    
+    # Creazione del dizionario con zip
+    dizionario = dict(zip(nomi, stipendi))
+    
+    return dizionario
 
+# Liste di esempio
+nomi = ["Alice", "Bob", "Carla", "Daniele"]
+stipendi = [2500, 3000, 2800, 3200]
+
+# Creazione del dizionario
+dizionario_stipendi = crea_dizionario(nomi, stipendi)
+
+# Output
+print("Dizionario creato:", dizionario_stipendi)
 
 
 
