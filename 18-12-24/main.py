@@ -18,17 +18,7 @@ else:
     lista_random = [random.randint(num_minimo, num_massimo) for _ in range(lunghezza_lista)]
     print("Lista generata:", lista_random)
     
-    def somma_numeri(lista):
-    """
-    Questa funzione prende una lista come input e restituisce 
-    la somma di tutti i numeri presenti nella lista.
-    
-    Args:
-        lista (list): Una lista contenente elementi di vario tipo.
-    
-    Returns:
-        float: La somma dei numeri nella lista.
-    """
+def somma_numeri(lista):
     somma = 0
     for elemento in lista:
         if isinstance(elemento, (int, float)):  # Controlla se è un numero
@@ -42,16 +32,6 @@ print(f"La somma dei numeri nella lista è: {risultato}")
     
     
 def numeri_volanti_di_merz(n, regola):
-    """
-    Calcola i numeri volanti di Merz secondo una regola data.
-    
-    Args:
-        n (int): Numero di termini da generare.
-        regola (function): Funzione che definisce la regola della sequenza.
-    
-    Returns:
-        list: Sequenza dei numeri volanti di Merz.
-    """
     # Inizializzazione dei valori di partenza
     sequenza = [1, 1]
     
