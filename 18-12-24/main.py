@@ -40,3 +40,35 @@ lista_di_prova = [1, 2, "ciao", 3.5, True, 4, "Python"]
 risultato = somma_numeri(lista_di_prova)
 print(f"La somma dei numeri nella lista è: {risultato}")
     
+    
+def numeri_volanti_di_merz(n, regola):
+    """
+    Calcola i numeri volanti di Merz secondo una regola data.
+    
+    Args:
+        n (int): Numero di termini da generare.
+        regola (function): Funzione che definisce la regola della sequenza.
+    
+    Returns:
+        list: Sequenza dei numeri volanti di Merz.
+    """
+    # Inizializzazione dei valori di partenza
+    sequenza = [1, 1]
+    
+    # Generazione della sequenza fino al termine n
+    for i in range(2, n):
+        nuovo_termine = regola(sequenza[i-1], sequenza[i-2])
+        sequenza.append(nuovo_termine)
+    
+    return sequenza
+
+# Definizione della regola (esempio: somma dei due numeri precedenti)
+def regola_somma(x, y):
+    return x + y
+
+# Calcolo dei primi 10 numeri volanti di Merz
+n = 10
+risultato = numeri_volanti_di_merz(n, regola_somma)
+
+# Output
+print("Numeri volanti di Merz:", risultato)
