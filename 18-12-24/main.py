@@ -17,3 +17,26 @@ else:
     # Creazione della lista con numeri random
     lista_random = [random.randint(num_minimo, num_massimo) for _ in range(lunghezza_lista)]
     print("Lista generata:", lista_random)
+    
+    def somma_numeri(lista):
+    """
+    Questa funzione prende una lista come input e restituisce 
+    la somma di tutti i numeri presenti nella lista.
+    
+    Args:
+        lista (list): Una lista contenente elementi di vario tipo.
+    
+    Returns:
+        float: La somma dei numeri nella lista.
+    """
+    somma = 0
+    for elemento in lista:
+        if isinstance(elemento, (int, float)):  # Controlla se è un numero
+            somma += elemento
+    return somma
+
+# Esempio di utilizzo
+lista_di_prova = [1, 2, "ciao", 3.5, True, 4, "Python"]
+risultato = somma_numeri(lista_di_prova)
+print(f"La somma dei numeri nella lista è: {risultato}")
+    
