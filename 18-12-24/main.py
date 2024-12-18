@@ -76,7 +76,7 @@ print("Numeri volanti di Merz:", risultato)
 
 # creare una lista di nomi
 # creare una lista di stipendi 
-# 
+# creare una funzione che crea un dizionario a partire da queste due liste
 
 
 
