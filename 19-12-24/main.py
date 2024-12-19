@@ -1,3 +1,4 @@
+# Definizione delle funzioni
 def aggiungi_altezza(altezze):
     altezza = float(input("Inserisci l'altezza in centimetri: "))
     altezze.append(altezza)
@@ -51,5 +52,6 @@ def menu():
         else:
             print("Opzione non valida. Riprova.")
 
+# Funzione principale che avvia il menu
 if __name__ == "__main__":
     menu()
