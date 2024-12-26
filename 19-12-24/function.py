@@ -1,2 +1,5 @@
-def test(a, b):
-    print(a + b)
+nums = [1, 2, 3]
+vals = nums
+del vals[1:2]
+
+print(nums, vals)
