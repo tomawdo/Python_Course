@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background-color: #f9f9f9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #ccc;
+            overflow-x: auto;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        pre > code {
+            display: block;
+            background: #f1f1f1;
+            padding: 1.33em;
+            border-radius: 0.33em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Loops</h1>
+    <ol>
+        <li>
+            The <code>while</code> loop statement is a means allowing the programmer to
+            <strong>repeat</strong> the execution of the selected part of the code as long as the specified
+            condition is <code>true</code>. The condition is checked before the loop's first turn, and therefore
+            the loop's <strong>body</strong> may not even be executed once.
+        </li>
+        <li>
+            The basic form of the <code>while</code> statement looks as follows:
+            <pre>
+while condition:
+    instructions
+            </pre>
+        </li>
+        <li>
+            The <code>condition</code> is an <strong>expression</strong> – as long as it evaluates to
+            <code>True</code>, or to a non-zero numeric value, or to a non-empty string, it is fulfilled
+            (met) and is not <code>None</code>, the nested instructions placed after the <code>while</code>
+            are executed.
+        </li>
+        <li>
+            When the condition is <strong>not met</strong>, these instructions are skipped.
+        </li>
+    </ol>
+    <p>For example, the following snippet prints <code>TRUE</code> twice to the screen:</p>
+    <pre>
+counter = 2
+while counter > 0:
+    print('TRUE')
+    counter -= 1
+    </pre>
+</body>
+</html>

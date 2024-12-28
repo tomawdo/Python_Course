@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Lists</h1>
+    <ol>
+        <li>
+            A <strong>list</strong> is a data aggregate that contains a certain number (including zero) of elements of any type.
+        </li>
+        <li>
+            List are <strong>sequences</strong> - they can be iterated, and the order of elements are established.
+        </li>
+        <li>
+            List are <strong>mutable</strong> - their contents may be changed.
+        </li>
+        <li>
+            List can be <strong>initialized</strong> with list literals. For example, these two assignments instantiate two lists - the former is empty, while the latter contains three elements:
+<pre>
+empty_list = []
+three_elements = [1, "two", False]
+</pre>
+        </li>
+        <li>
+            The number of elements contained in can be determined by the <code>len()</code> function. For example, the following snippet prints <code>3</code> to the screen:
+<pre>print(len(["a", "b", "c"]))</pre>
+        </li>
+        <li>
+            Any of list elements can be accessed using <strong>indexing</strong>. List elements are indexed by integer numbers starting from <strong>zero</strong>. Therefore, the first list element's index is <strong>0</strong> while the last element's index is equal to the <strong>list length minus 1</strong>. Using indices that are not integers raises the <code>TypeError</code> exception. For exemple, the following snippets prints <output>a b c 0 1 2</output>:
+<pre>
+the_list = ['a', 'b', 'c']
+counter = 0
+for ix in range(len(the_list)):
+    print(the_list[ix], end=' ')
+    the_list[ix] = counter
+    counter += 1
+for ix in range(len(the_list)):
+    print(the_list[ix], end=' ')
+</pre>
+        </li>
+        <li>
+            The list elements can be indexed with <strong>negative numbers</strong>, too. In this case, <b>-1</b> accesses the last element of the list, and <b>-2</b> accesses the one before the last, and so on.The alternative first list element's index is <code><b>-len(list)</b></code>.
+        </li>
+
+</body>
+</html>
