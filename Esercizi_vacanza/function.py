@@ -11,9 +11,10 @@ def sfida1():
 
 def sfida2():
     print("Scrivi un programma che permetta di calcolare per quanto tempo deve rimanere acceso il forno "
-          "per il pranzo di Natale. Il programma prende in input tutte le pietanze che richiedono di essere"
-          "inserite in forno e relativo tempo di cottura e restituisce la somma del tempo necessario per"
-          "completare tutte le preparazioni")
+          "\nper il pranzo di Natale. Il programma prende in input tutte le pietanze che richiedono di essere"
+          "\ninserite in forno e relativo tempo di cottura e restituisce la somma del tempo necessario per"
+          "\ncompletare tutte le preparazioni"
+          "\n")
     try:
         nr_pietanze = int(input("Quante pietanze cucinerai? ")) # utente indica il numero di pietanze
         tempo_totale = 0
@@ -34,8 +35,9 @@ def sfida2():
 
 def sfida3():
     print("Scrivi un programma che calcoli il numero totale di parole presenti in un messaggio di auguri.")
-
-
+    messaggio = "Tanti auguri! La multi ani! Happy New Year!"
+    lunghezza = len(messaggio.split())
+    print(f"Il messaggio ({messaggio}) è composto da {lunghezza} parole.")
 
 
 if __name__ == "__main__":
