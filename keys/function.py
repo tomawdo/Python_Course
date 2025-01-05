@@ -1,11 +1,6 @@
-from icecream import ic
+import math
+import time
 
-train_speed = {
-    "Flyingscotsman": 201,
-    "TGV": 320,
-    "Shinkansen": 320
-}
-
-for train in train_speed.values():
-    print(str(train)[0], end="")
-
+print(math.pow(2, 3))
+print(math.pow(2, 4))
+print(math.pow(2, 5))

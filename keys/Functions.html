@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Functions</h1>
+    <ol>
+        <li>
+            A <b>function</b> is a named, separate part of the code that can be <b>activated on demand</b>. A function can <b>perform an action</b>, or <b>return a result</b>, or <b>both</b>.
+        </li>
+        <li>
+            The simplest function, which does nothing and returns no result, can be defined in the following way:
+<pre>def lazy():
+    pass</pre>
+        </li>
+        <li>
+            Activating a function is done by the <b>function activation</b> (function call) The <code>lazy()</code> function defined above can be invoked by the following clause:
+<pre>lazy()</pre>
+        </li>
+        <li>
+            Function definition must <b>precede its invocation</b>. Breaking this rule raises the <code>NameError</code> exception.
+        </li>
+        <li>
+            A function can be equipped with an arbitrary number of <b>parameters</b>. The parameters behave like variables known inside the function only, and their values are set during the invocation. The invocation must provide <b>as many arguments as needed to initialize all parameters</b>. Breaking this rule result in raising the <code>TypeError</code> exception.
+        </li>
+        <li>
+            If a function is supposed to evaluate a result, it must perform the <code>return</code> expression <i>instruction</i>, which immediately terminates function execution and causes the function to return the <i>expression</i> value to the invoker. If the function does not execute the instruction, or utilizes return without an expression, the None value is returned implicity. For example, the following snipet prints <code>True None</code> to the screen:
+<pre>def function(parameter):
+     if parameter == False:
+        return True
+print(function(False), function(True))</pre>
+        </li>
+        <li>
+            A function definition can declare <b>default values</b> for some or all its parameters. When the invocation does not provide arguments for these parameters, the default values are taken into consideration.
+            Note: parameters with default values must not precede the ones without them. For example, the following snippet prints <code>True False</code> to the screen:
+<pre>def function(parameter = False):
+    return parameter
+print(function(parameter = False), function())
+</pre>
+        </li>
+        <li>
+            The <b>positional</b> parameter passing technique is a technique based on the assumption that the arguments are associated with the parameters <b>based upon their position</b> (i.e. the first argument value goes to the first parameter, and so on) For example, the following snippet outputs <code>1 2 3</code> to the screen:
+<pre>def function(a, b, c):
+    print(a, b, c)
+function(1, 2, 3)
+</pre>
+        </li>
+        <li>
+            The <b>keyword</b> parameter passing technique is a technique based on the assumption that the arguments are associated with the parameters based upon the parameter's <b>names</b>, which must be explicitly specified during the invocation. For example, the following snippet outputs <code>1 2 3</code> to the screen:
+<pre>def function(a, b, c):
+    print(a, b, c)
+function(c=3, a=1, b=2)
+</pre>
+        </li>
+
+</body>
+</html>
