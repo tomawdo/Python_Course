@@ -1,7 +1,9 @@
 from function import *
 
 sfide = {
-    1: sfida1
+    1: sfida1,
+    2: sfida2,
+    3: sfida3
 }
 
 while True:
@@ -17,3 +19,6 @@ while True:
         sfide[scelta]()
     else:
         print("Scelta non valida. Inserisci un numero tra 1 e 24.")
+
+
+
