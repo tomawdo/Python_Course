@@ -65,12 +65,56 @@ def sfida4():
 
             print(f"\nL'elfo, che aiuterà Babbo Natale, si chiamerà {nome} {cognome}.")
 
+def sfida5():
+    print("Scrivi un programma che calcoli il tempo necessario per calcolare quanto tempo che ci vuole per"
+          "\nprodurre un determinato tipo di giocattolo (es. bambola, trenino, lego...). Il programma prende in"
+          "\ninput: la tipologia di giocattolo (a cui avrai associato un tempo di realizzazione per elfo es. 1 elfo"
+          "\nproduce 1 bambola in 1 ora), e il numero di pezzi da realizzare e quanti elfi sono disponibili a"
+          "\nlavorare su quell'ordine. Restituisce come risultato il numero delle ore necessarie per soddisfare"
+          "\nquell'ordine")
 
+    dati_lego = {
+        "LEGO Millennium Falcon": {"elfi_operativi": 5, "ore_necessarie": 10},
+        "LEGO Technic Bugatti Chiron": {"elfi_operativi": 4, "ore_necessarie": 9},
+        "LEGO Hogwarts Castle": {"elfi_operativi": 6, "ore_necessarie": 12},
+        "LEGO Titanic": {"elfi_operativi": 8, "ore_necessarie": 15},
+        "LEGO Star Wars AT-AT": {"elfi_operativi": 7, "ore_necessarie": 13}
+    }
 
+    nomi_lego = list(dati_lego.keys()) # associo i numeri ai giochi
+
+    while True:
+        domanda = input(
+            "Vuoi calcolare il tempo di assemblaggio di uno dei più famosi LEGO? (sì/no o 0 per uscire): ").lower()
+
+        if domanda == "0" or domanda == "no":
+            print("Alla prossima!")
+            break
+        elif domanda == "sì":
+            print("\nEcco i LEGO disponibili:")
+            for i, gioco in enumerate(nomi_lego, 1):
+                print(f"{i}. {gioco}")
+
+            scelta = int(input("\nScegli il tuo LEGO preferito (1-5): "))
+            if 1 <= scelta <= len(nomi_lego):
+                lego_scelto = nomi_lego[scelta - 1]
+                elfi = dati_lego[lego_scelto]["elfi_operativi"]
+                ore = dati_lego[lego_scelto]["ore_necessarie"]
+
+                nr_assemblaggi = int(input(f"\nOttimo! Quanti esemplari vuoi assemblare di {lego_scelto}? "))
+                nr_ore_assemblaggio = nr_assemblaggi * ore
+
+                print(
+                    f"\nPer assemblare {nr_assemblaggi} esemplari di {lego_scelto}, servono {elfi} Elfi e {nr_ore_assemblaggio} ore di assemblaggio.\n")
+            else:
+                print("\nScelta non valida. Riprova.\n")
+        else:
+            print("\nInput non valido. Inserisci 'sì', 'no' o '0' per uscire.\n")
 
 
 if __name__ == "__main__":
     sfida1(),
     sfida2(),
     sfida3(),
-    sfida4()
+    sfida4(),
+    sfida5()

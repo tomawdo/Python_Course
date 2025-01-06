@@ -4,7 +4,8 @@ sfide = {
     1: sfida1,
     2: sfida2,
     3: sfida3,
-    4: sfida4
+    4: sfida4,
+    5: sfida5
 }
 
 while True:
