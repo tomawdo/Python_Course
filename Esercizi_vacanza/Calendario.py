@@ -3,7 +3,8 @@ from function import *
 sfide = {
     1: sfida1,
     2: sfida2,
-    3: sfida3
+    3: sfida3,
+    4: sfida4
 }
 
 while True:

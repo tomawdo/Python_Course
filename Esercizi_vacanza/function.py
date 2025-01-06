@@ -39,8 +39,38 @@ def sfida3():
     lunghezza = len(messaggio.split())
     print(f"Il messaggio ({messaggio}) è composto da {lunghezza} parole.")
 
+def sfida4():
+    print("Crea un programma che generi automaticamente i nomi degli elfi che aiutano Babbo Natale."
+          "Il programma chiederà due input, uno che selezioni il nome e l'altro il cognome")
+
+    lista_nomi = ["Neve", "Fiocco", "Ghirlanda", "Albero", "Strenna", "Gingerbread",
+                  "Agrifoglio", "Cannella", "Biscotto", "Vischio", "Candela"]
+    lista_cognomi = ["Allegro", "scintillante", "minuscolo", "gioioso", "vivace", "gelido", "soffice",
+                     "ridacchiante", "lucido", "scintillante", "piccante", "carino", "cattivo", "volante",
+                     "frizzante", "sfacciato", "luminoso", "splendente", "rimbalzante", "coccolante"]
+
+    domanda_nome = input("Vuoi scegliere un nome dalla lista? (sì/no) ")
+    if domanda_nome == "sì":
+        for nome in lista_nomi:
+            print(nome.capitalize())
+        nome = input("Scegli il nome che ti piace: ")
+        print(f"Ok, hai scelto {nome}.")
+
+        domanda_cognome = input("Procediamo con il cognome? (sì/no) ")
+        if domanda_cognome == "sì":
+            for cognome in lista_cognomi:
+                print(cognome.capitalize())
+            cognome = input(f"Scegli il cognome che più si abbina al nome: ")
+            print(f"Molto bene, hai scelto {cognome}.")
+
+            print(f"\nL'elfo, che aiuterà Babbo Natale, si chiamerà {nome} {cognome}.")
+
+
+
+
 
 if __name__ == "__main__":
     sfida1(),
     sfida2(),
-    sfida3()
+    sfida3(),
+    sfida4()
