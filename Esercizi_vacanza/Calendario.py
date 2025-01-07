@@ -6,8 +6,17 @@ sfide = {
     3: sfida3,
     4: sfida4,
     5: sfida5,
-    6: sfida6
+    6: sfida6,
+    7: sfida7,
+    8: sfida8,
+    9: sfida9,
+    10: sfida10,
+    11: sfida11,
+    12: sfida12,
+    13: sfida13,
+    14: sfida14
 }
+
 
 while True:
     print("\n*** Calendario delle Sfide di Programmazione ***")
@@ -22,7 +31,4 @@ while True:
         sfide[scelta]()
     else:
         print("Scelta non valida. Inserisci un numero tra 1 e 24.")
-
-# kyqnuk-miNmah-bidge4
-
-
+    
