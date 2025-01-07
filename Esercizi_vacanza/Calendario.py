@@ -17,7 +17,6 @@ sfide = {
     14: sfida14
 }
 
-
 while True:
     print("\n*** Calendario delle Sfide di Programmazione ***")
     print("Digita il numero del giorno (1-24) per affrontare una sfida, oppure 0 per uscire.")

@@ -135,9 +135,8 @@ nel silenzio andiam."""
 
 def sfida7():
     print("Scrivi un programma che ti permetta di inserire data e ora corrente e che calcoli quanto tempo manca al Natale \n")
-    #data_corrente = datetime.now()
     data_corrente = input("Inserisci la data di oggi: ")
-    print(data_corrente)
+
     natale = datetime(data_corrente.year, 12, 25)
     if data_corrente > natale:
         natale = datetime(data_corrente.year + 1, 12, 25)
@@ -162,7 +161,7 @@ def sfida9():
     
     costo = int(input("Inserisci il costo totale della cena: "))
     amici = int(input("In quanti eravate? "))
-    print(f"La quota per ciscuno è di {costo / amici:.2f}")
+    print(f"La quota per ciascuno è di {costo / amici:.2f}")
 
 def sfida10():
     filastrocca = input("Inserisci filastrocca: ")
@@ -192,15 +191,25 @@ def sfida12():
     print(f"Stipendio elfico: {stipendio:.2f}EUR")
 
 def sfida13():
-    print("Dato il peso massimo trasportabile dalla slitta di Babbo Natale (inserito dall'utente),"
-          "crea un programma che permetta di inserire n regali finchè non si raggiunge il numero"
-          "consentito")
-    nr_regali = int(input("Quanti regali può trasportare? "))
-    regali = []
+    print("Dato il peso massimo trasportabile dalla slitta di Babbo Natale, crea un programma che"
+          " permetta di inserire i pesi dei regali finché non si raggiunge il limite consentito.")
 
-    for tot_reg in range(nr_regali):
-        regalo = int(input("Quanti regali vuoi trasportare? "))
-        regalo =+ regali.append
+    peso_massimo = int(input("Qual è il peso massimo trasportabile dalla slitta? "))
+    regali = []
+    peso_totale = 0
+
+    print("\nInizia ad aggiungere i pesi dei regali (uno alla volta).")
+    while peso_totale < peso_massimo:
+        peso_regalo = int(input("Inserisci il peso del regalo: "))
+        if peso_totale + peso_regalo > peso_massimo:
+            print(f"\nNon puoi aggiungere un regalo di peso {peso_regalo}. Supererebbe il limite di {peso_massimo}.")
+            continue
+        regali.append(peso_regalo)
+        peso_totale += peso_regalo
+
+        print(f"Regalo aggiunto! Peso totale: {peso_totale}/{peso_massimo}.")
+    print("\nLa slitta è piena! Ecco i pesi dei regali caricati:")
+    print(regali)
 
 def sfida14():
     print("Scrivi un programma che calcoli la distanza percorsa da una palla di neve."
