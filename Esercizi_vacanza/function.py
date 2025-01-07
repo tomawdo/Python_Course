@@ -134,14 +134,20 @@ nel silenzio andiam."""
             print(f"\n{riga}")
 
 def sfida7():
-    print("Scrivi un programma che ti permetta di inserire data e ora corrente e che calcoli quanto tempo manca al Natale \n")
-    data_corrente = input("Inserisci la data di oggi: ")
+    print(
+        "Scrivi un programma che ti permetta di inserire data e ora corrente e calcoli quanto tempo manca al Natale.\n")
+    data_corrente_str = input("Inserisci la data di oggi (formato: YYYY-MM-DD): ")
+
+    try:
+        data_corrente = datetime.strptime(data_corrente_str, "%Y-%m-%d")
+    except ValueError:
+        print("Formato della data non valido. Usa il formato YYYY-MM-DD.")
+        return
 
     natale = datetime(data_corrente.year, 12, 25)
     if data_corrente > natale:
         natale = datetime(data_corrente.year + 1, 12, 25)
     tempo_rimanente = natale - data_corrente
-
     print(f"Tempo rimanente fino a Natale: {tempo_rimanente}")
 
 def sfida8():
@@ -149,9 +155,9 @@ def sfida8():
 
     base = int(input("Base in mm: "))
     altezza = int(input("Altezza in mm: "))
-    profondità = int(input("Profondità in mm: "))
+    profondo = int(input("Profondità in mm: "))
 
-    result = base * altezza * profondità
+    result = base * altezza * profondo
     print(f"Il volume è {result} mm")
 
 def sfida9():
