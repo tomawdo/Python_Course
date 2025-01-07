@@ -111,10 +111,31 @@ def sfida5():
         else:
             print("\nInput non valido. Inserisci 'sì', 'no' o '0' per uscire.\n")
 
+def sfida6():
+    print("Scegli una canzone di Natale di tuo gusto e scrivi un programma "
+          "che stampi una riga sì e una riga no di quella canzone")
+
+    canzone = """Jingle bells jingle bells
+oh che bello andar
+bello andare col cavallo
+sulla neve bianca.
+Jingle bells jingle bells
+oh che bello andar
+scivolando con la slitta
+nel silenzio andiam."""
+
+    print(f"\n{canzone}")
+
+    righe = canzone.splitlines()
+    for i, riga in enumerate(righe):
+        if i % 2 == 0:
+            print(f"\n{riga}")
+
 
 if __name__ == "__main__":
     sfida1(),
     sfida2(),
     sfida3(),
     sfida4(),
-    sfida5()
+    sfida5(),
+    sfida6()
