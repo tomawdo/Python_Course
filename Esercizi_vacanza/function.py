@@ -136,6 +136,7 @@ nel silenzio andiam."""
 def sfida7():
     print(
         "Scrivi un programma che ti permetta di inserire data e ora corrente e calcoli quanto tempo manca al Natale.\n")
+
     data_corrente_str = input("Inserisci la data di oggi (formato: YYYY-MM-DD): ")
 
     try:
