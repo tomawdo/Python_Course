@@ -7,5 +7,8 @@ matrix = [
 somma = 0
 for x in matrix:
     for y in x:
-        somma += y
+        # somma += y
+        somma = somma + y
         print(y)
+
+print(f"La somma è {somma}")
