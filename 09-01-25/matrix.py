@@ -7,4 +7,5 @@ matrix = [
 somma = 0
 for x in matrix:
     for y in x:
+        # sommare tutti gli elementi della matrice
         print(y)
