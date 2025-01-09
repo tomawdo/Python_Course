@@ -1,4 +1,5 @@
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 def sfida1():
     print("Scrivi un programma che permetta a un negoziante di calcolare lo sconto. "
@@ -218,8 +219,38 @@ def sfida13():
     print(regali)
 
 def sfida14():
-    print("Scrivi un programma che calcoli la distanza percorsa da una palla di neve."
-          "L'utente deve poter inserire due input, m/s(metri al secondo) e s(secondi) impiegati per atterrare.")
+    print("Calcolo della distanza percorsa da una palla di neve e verifica della barriera del suono.")
+    print("La barriera del suono è fissata a 343 m/s (velocità del suono a livello del mare).\n")
+
+    try:
+        ms = float(input("Inserisci la velocità della palla di neve (m/s): "))
+        s = float(input("Inserisci il tempo di viaggio (s): "))
+
+        if ms <= 0 or s <= 0:
+            print("La velocità e il tempo devono essere numeri positivi. Riprova.")
+            return
+
+        distanza = ms * s
+        if ms > 343:
+            print(f"\nLa palla di neve ha infranto la barriera del suono! (Velocità: {ms:.2f} m/s)")
+            tempo_per_1km = 1000 / ms
+            print(f"A questa velocità, percorrere 1 km richiederebbe {tempo_per_1km:.2f} secondi.")
+        else:
+            differenza = 343 - ms
+            print(f"\nLa palla di neve NON ha infranto la barriera del suono.")
+            print(f"Manca una velocità aggiuntiva di {differenza:.2f} m/s per superarla.")
+
+        if distanza > 1000:
+            km = distanza / 1000
+            print(f"\nDistanza percorsa: {km:.2f} km")
+        else:
+            print(f"\nDistanza percorsa: {distanza:.2f} metri")
+
+    except ValueError:
+        print("Errore: Inserisci numeri validi per la velocità e il tempo.")
+
+
+
 
 
 
