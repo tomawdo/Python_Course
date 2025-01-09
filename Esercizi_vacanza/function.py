@@ -1,5 +1,4 @@
 from datetime import datetime
-import matplotlib.pyplot as plt
 
 def sfida1():
     print("Scrivi un programma che permetta a un negoziante di calcolare lo sconto. "
