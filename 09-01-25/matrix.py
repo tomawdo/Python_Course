@@ -4,3 +4,7 @@ matrix = [
     [6, 8, 11],
     [1, 7, 9]
 ]
+somma = 0
+for x in matrix:
+    for y in x:
+        print(y)
