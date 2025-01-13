@@ -1,4 +1,7 @@
-the_data = ['data', -1, 2.7182818]
-
-if the_data.index(-1) > 0:
-    print(the_data[-1])
+angle = 0
+for i in range(5):
+    if i % 2 == 1:
+        angle += 1
+else:
+    angle -= 1
+print(angle)

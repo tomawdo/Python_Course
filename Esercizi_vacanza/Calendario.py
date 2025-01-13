@@ -31,3 +31,5 @@ while True:
     else:
         print("Scelta non valida. Inserisci un numero tra 1 e 24.")
     
+
+
