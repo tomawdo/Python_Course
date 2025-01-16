@@ -50,9 +50,11 @@ def long_running_process():
 
 long_running_process()
 '''
+arr = [39, 12, 18, 85, 72, 10, 2, 18]
 
+print(f"Unsorted list is: {arr}")
 
-
+bubble_sort(arr)
 
 
 
