@@ -6,23 +6,24 @@
 # 3 & 255 = ?
 # 8 & 0 = ?
 
+
+
 host_a = "150.169.3.8"
-host_b = "150.169.5.2"
+host_b = "150.169.3.2"
 sm = "255.255.255.0"
 
-# Split the IP addresses and subnet mask into their components
-host_a_parts = list(map(int, host_a.split('.')))
-host_b_parts = list(map(int, host_b.split('.')))
-sm_parts = list(map(int, sm.split('.')))
+parti_host_a = list(map(int, host_a.split('.')))
+parti_host_b = list(map(int, host_b.split('.')))
+parti_sm = list(map(int, sm.split('.')))
 
-# Perform bitwise AND operation for each octet and compare the result
-same_network = True
+intranet = True
 for i in range(4):
-    if (host_a_parts[i] & sm_parts[i]) != (host_b_parts[i] & sm_parts[i]):
-        same_network = False
+    if (parti_host_a[i] & parti_sm[i]) != (parti_host_b[i] & parti_sm[i]):
+        intranet = False
         break
 
-if same_network:
+if intranet:
     print("Gli host sono sulla stessa rete")
 else:
     print("Gli host non sono sulla stessa rete")
+
