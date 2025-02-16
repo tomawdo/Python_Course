@@ -71,6 +71,7 @@ alunni = {
 }
 
 nome = input("Inserisci il nome dello studente per modificare il voto: ").strip()
+cognome = str()
 
 if nome in alunni:
     nuovo_voto = float(input(f"Inserisci il nuovo voto per {nome}: "))
